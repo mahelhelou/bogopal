@@ -1,2 +1,27 @@
 //-
 	- Main navbar
+// Navbar
+nav.navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light.px-3.py-4
+	.container
+		a.navbar-brand(href='index.html')
+			div.navbar-brand__box
+				//- img(src="images/icons/icon--oktobly-logo-blue-transparent.png" class="img-fluid" alt="شعار موقع اكتبلي")
+				h3 Aqar Tech
+		button.navbar-toggler(type='button' data-toggle='collapse' data-target='#main-menu' aria-controls='main-menu' aria-expanded='false' aria-label='Toggle navigation')
+			span.navbar-toggler-icon
+		#main-menu.collapse.navbar-collapse
+			ul.navbar-nav.mx-auto
+				li.nav-item(class=activePage == 'home' ? 'active' : '')
+					a.nav-link(href='index.html') Home
+						span.sr-only (current)
+				li.nav-item(class=activePage == 'investments' ? 'active' : '')
+					a.nav-link(href='investments.html') Investments
+				li.nav-item(class=activePage == 'faqs' ? 'active' : '')
+					a.nav-link(href='faqs.html') FAQs
+				li.nav-item(class=activePage == 'team' ? 'active' : '')
+					a.nav-link(href='team.html') Team
+				li.nav-item(class=activePage == 'about' ? 'active' : '')
+					a.nav-link(href='about.html') About Us
+				li.nav-item(class=activePage == 'contact' ? 'active' : '')
+					a.nav-link(href='contact.html') Contact Us
+// navbar-end
