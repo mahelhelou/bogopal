@@ -1,0 +1,8 @@
+mixin deal(dealObj)
+	.col-md-4.mt-3
+		.card
+			a(href='single-deal.html')
+				img.card-img(src= dealObj.img)
+			.card-body
+				a.text-decoration-none.text-dark(href="#")
+					h5.card-title= dealObj.title

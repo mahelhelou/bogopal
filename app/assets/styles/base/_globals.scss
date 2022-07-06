@@ -1,1 +1,34 @@
-// Globals
+*::selection {
+  // background: $primaryDarker;
+  // color: #fff;
+}
+
+body {}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500 !important;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700 !important;
+
+    @include responsive(atSmall) {
+      font-size: 1.625rem !important;
+    }
+
+    &--smaller {
+      font-size: 1.5rem;
+    }
+  }
+}

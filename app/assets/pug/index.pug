@@ -10,15 +10,9 @@ block content
 		.container
 			h2.section-title Trending
 			.row
-				.col-md-3
-					img.img-fluid(src="https://picsum.photos/200/300?random=2")
-					.deals__meta
-						.deals__meta-item
-							p 40% OFF
-						.deals__meta-item
-							p 4.0
-					h3 Lorem ipsum dolor sit amet.
-				.col-md-3
-				.col-md-3
-				.col-md-3
+				include ./mixins/_mixin-single-deal
+				+deal({
+					title: 'lorem ipsum dolor sit amet',
+					img: 'http://placehold.it/300x200',
+				})
 	// trending-end

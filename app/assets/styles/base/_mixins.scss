@@ -1,0 +1,19 @@
+@mixin responsive($screen) {
+  @if $screen=='atSmall' {
+    @media screen and (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @if $screen=='atMedium' {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $screen=='atLarge' {
+    @media screen and (min-width: 992px) {
+      @content;
+    }
+  }
+}

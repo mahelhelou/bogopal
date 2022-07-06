@@ -1,0 +1,18 @@
+mixin deals(dealsObj)
+  section.deals.py-5
+    .container
+      h2.section-title Deals
+      .row
+        include ./_mixin-single-deal
+        +deal({
+          img: 'https://placehold.it/300/300',
+          title: 'lorem ipsum dolor sit amet',
+        })
+        +deal({
+          img: 'https://placehold.it/300x200',
+          title: 'lorem ipsum dolor sit amet',
+        })
+        +deal({
+          img: 'https://placehold.it/300x200',
+          title: 'lorem ipsum dolor sit amet',
+        })
