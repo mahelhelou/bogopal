@@ -1,0 +1,18 @@
+.categories {
+  &__item {
+    position: relative;
+
+    img {
+      height: 75px;
+    }
+
+    &-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 1rem;
+    }
+  }
+}

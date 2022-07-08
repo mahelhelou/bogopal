@@ -5,14 +5,65 @@ block pageTitle
 	title Home | BogoPal
 
 block content
-	// Trending
-	section.py-5.deals
+	//- Includes
+	include ./mixins/_mixin-deals
+	//- includes-end
+	// Hero
+	section.hero
 		.container
-			h2.section-title Trending
+			h1 Find Your Next Deal
+			form.form-inline(action="#" method="get")
+				input.form-control.mr-sm-2(type='search' name='dealsSearch', placeholder='Search')
+				button.btn.btn-primary.my-2.my-sm-0(type='submit') Search
+	// hero-end
+	|
+	|
+	// Categories
+	section.py-5.categories
+		.container
+			h2.section-title Browse Our Categories
 			.row
-				include ./mixins/_mixin-single-deal
-				+deal({
-					title: 'lorem ipsum dolor sit amet',
-					img: 'http://placehold.it/300x200',
+				include ./mixins/_mixin-single-category
+				+category({
+					img: 'https://api.lorem.space/image/watch',
+					title: 'Restaurants',
 				})
+				+category({
+					img: 'https://api.lorem.space/image/watch',
+					title: 'Restaurants',
+				})
+				+category({
+					img: 'https://api.lorem.space/image/watch',
+					title: 'Restaurants',
+				})
+				+category({
+					img: 'https://api.lorem.space/image/watch',
+					title: 'Restaurants',
+				})
+				+category({
+					img: 'https://api.lorem.space/image/watch',
+					title: 'Restaurants',
+				})
+				+category({
+					img: 'https://api.lorem.space/image/watch',
+					title: 'Restaurants',
+				})
+				+category({
+					img: 'https://api.lorem.space/image/watch',
+					title: 'Restaurants',
+				})
+	// categories-end
+	|
+	|
+	// Top deals
+	+deals({
+		title: 'Top Deals'
+	})
+	// top-deals-end
+	|
+	|
+	// Trending
+	+deals({
+		title: 'Trending Deals'
+	})
 	// trending-end
