@@ -1,36 +1,54 @@
 mixin deals(dealsObj)
   section.deals.py-5
     .container
-      h2.section-title= dealsObj.title
+      h2.section-title.mb-4= dealsObj.title
       .row
         include ./_mixin-single-deal
         +deal({
+          category: 'Restaurants',
           img: 'https://api.lorem.space/image/watch',
           title: 'lorem ipsum dolor sit amet',
-          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, veritatis.'
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, veritatis.',
+          oldPrice: '100',
+          newPrice: '50'
         })
         +deal({
+          category: 'Restaurants',
           img: 'https://api.lorem.space/image/watch',
           title: 'lorem ipsum dolor sit amet',
-          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, veritatis.'
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, veritatis.',
+          oldPrice: '100',
+          newPrice: '50'
         })
         +deal({
+          category: 'Restaurants',
           img: 'https://api.lorem.space/image/watch',
           title: 'lorem ipsum dolor sit amet',
-          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, veritatis.'
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, veritatis.',
+          oldPrice: '100',
+          newPrice: '50'
         })
         +deal({
+          category: 'Restaurants',
           img: 'https://api.lorem.space/image/watch',
           title: 'lorem ipsum dolor sit amet',
-          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, veritatis.'
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, veritatis.',
+          oldPrice: '100',
+          newPrice: '50'
         })
         +deal({
+          category: 'Restaurants',
           img: 'https://api.lorem.space/image/watch',
           title: 'lorem ipsum dolor sit amet',
-          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, veritatis.'
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, veritatis.',
+          oldPrice: '100',
+          newPrice: '50'
         })
         +deal({
+          category: 'Restaurants',
           img: 'https://api.lorem.space/image/watch',
           title: 'lorem ipsum dolor sit amet',
-          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, veritatis.'
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, veritatis.',
+          oldPrice: '100',
+          newPrice: '50'
         })

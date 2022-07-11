@@ -1,5 +1,5 @@
 // Libraries
-// @import 'libs/all.min.scss';
+@import 'libs/all.min.scss';
 @import 'libs/bootstrap.min.scss';
 
 // Base
@@ -9,6 +9,10 @@
 @import 'base/styles-reset';
 
 // Modules
+@import 'modules/navbar';
 @import 'modules/hero';
 @import 'modules/categories';
 @import 'modules/deals';
+@import 'modules/search-overlay';
+@import 'modules/modals';
+@import 'modules/footer';

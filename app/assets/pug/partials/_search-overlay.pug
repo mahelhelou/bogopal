@@ -1,0 +1,13 @@
+// Search overlay
+.search-overlay
+	.search-overlay__content
+		h2.mb-5 ماذا تريد أن تشاهد على&nbsp;
+			strong.font-weight-bold.text-danger فيلو؟
+		.search-overlay__search-input
+			form
+				.input-group.mt-3
+					input.form-control(type='search' placeholder='ابحث في فيلو...' name='s' autofocus)
+					.input-group-append
+						.input-group-text(type='submit')
+							i.fas.fa-search
+		i.fas.fa-times-circle.search-overlay__close(aria-hidden="true")
