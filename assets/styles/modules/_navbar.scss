@@ -1,0 +1,30 @@
+.navbar {
+  &-brand__box {
+    height: 50px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .btn-link {
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: rgba($mainTextColor, .7);
+  }
+
+  .search {
+    background: green;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+
+    .search-btn {
+      font-size: .75rem;
+      margin: auto;
+      cursor: pointer;
+    }
+  }
+}

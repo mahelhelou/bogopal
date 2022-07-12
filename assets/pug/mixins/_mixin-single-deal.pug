@@ -1,0 +1,19 @@
+mixin deal(dealObj)
+	.col-md-4.mt-3.mt-md-0
+		.card
+			a(href='single-deal.html')
+				img.card-img(src= dealObj.img)
+			.card-body
+				.mb-3
+					span.font-weight-bold.mr-2 Category /
+					a(href="category.html")= dealObj.category
+				a.text-decoration-none.text-dark(href="#")
+					h5.card-title= dealObj.title
+				p.text-muted= dealObj.description
+				.price.d-flex.justify-content-between.my-3
+					div
+						// old price
+						del.mr-2.text-muted= '$' + dealObj.oldPrice
+						// new price
+						span.font-weight-bold.text-success= '$' + dealObj.newPrice
+					span.font-italic= 'Save ' + (dealObj.newPrice / dealObj.oldPrice) * 100 + '%'

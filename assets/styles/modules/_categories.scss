@@ -1,0 +1,23 @@
+.categories {
+  [class*="col-"] {
+    position: relative;
+    height: 20px !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  &__item {
+    position: relative;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    &-title {
+      margin: auto;
+      color: #fff;
+      font-size: 1rem;
+    }
+  }
+}
