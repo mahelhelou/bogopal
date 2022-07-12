@@ -1,2 +1,42 @@
 //-
-	- A layout for any internal page
+	- Default layout of the app
+	- At least, use it for index.html
+
+doctype html
+html
+	head
+		include ../partials/_meta
+		block pageTitle
+			title Document
+		|
+		|
+		// Styles
+		include ../partials/_styles
+
+	body
+		// Fallback javascript
+		include ../partials/_no-script
+		|
+		|
+		block navbar
+			- let activePage = 'home'
+			include ../partials/_navbar
+
+		block pageBanner
+			include ../partials/_page-banner
+		|
+		|
+		block content
+		|
+		|
+		include ../partials/_footer
+		|
+		include ../partials/_search-overlay
+		|
+		|
+		// Modals
+		include ../partials/_modals
+		|
+		|
+		// Scripts
+		include ../partials/_scripts

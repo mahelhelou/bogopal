@@ -1,0 +1,10 @@
+// Page Banner
+section.page-banner
+	.page-banner__content
+		block pageBannerTitle
+			h1.page-banner__title Page Banner Title
+		block pageBannerDescription
+			- let isDescriptionRequired = true
+			if isDescriptionRequired === true
+				p.page-banner__description Page Banner Description
+// page-banner-end

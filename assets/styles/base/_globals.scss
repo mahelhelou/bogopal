@@ -3,6 +3,12 @@ body {
   overflow-x: hidden;
 }
 
+.modal.open {
+  body {
+    overflow-x: hidden;
+  }
+}
+
 body {
   font-family: 'Open Sans'sans-serif;
   color: #333;
