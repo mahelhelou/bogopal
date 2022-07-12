@@ -24,34 +24,12 @@ block content
 			h2.section-title.mb-4 Browse Our Categories
 			.row
 				include ./mixins/_mixin-single-category
-				+category({
-					img: 'https://api.lorem.space/image/watch',
-					title: 'Restaurants',
-				})
-				+category({
-					img: 'https://api.lorem.space/image/watch',
-					title: 'Restaurants',
-				})
-				+category({
-					img: 'https://api.lorem.space/image/watch',
-					title: 'Restaurants',
-				})
-				+category({
-					img: 'https://api.lorem.space/image/watch',
-					title: 'Restaurants',
-				})
-				+category({
-					img: 'https://api.lorem.space/image/watch',
-					title: 'Restaurants',
-				})
-				+category({
-					img: 'https://api.lorem.space/image/watch',
-					title: 'Restaurants',
-				})
-				+category({
-					img: 'https://api.lorem.space/image/watch',
-					title: 'Restaurants',
-				})
+				for i in [1, 2, 3, 4]
+					+category({
+						img: 'https://api.lorem.space/image/watch',
+						title: 'Restaurants',
+					})
+
 	// categories-end
 	|
 	|

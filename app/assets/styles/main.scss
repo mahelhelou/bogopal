@@ -1,6 +1,7 @@
 // Libraries
 @import 'libs/all.min.scss';
 @import 'libs/bootstrap.min.scss';
+@import 'libs/swiper-bundle.min.scss';
 
 // Base
 @import 'base/mixins';
@@ -13,6 +14,7 @@
 @import 'modules/hero';
 @import 'modules/categories';
 @import 'modules/deals';
+@import 'modules/single-deal';
 @import 'modules/search-overlay';
 @import 'modules/modals';
 @import 'modules/footer';

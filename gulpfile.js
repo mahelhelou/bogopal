@@ -43,6 +43,7 @@ function styles() {
 function scripts() {
   const jsPath = {
     jquery: 'app/assets/scripts/libs/jquery.min.js',
+    bootstrap: 'app/assets/scripts/libs/swiper-bundle.min.js',
     bootstrap: 'app/assets/scripts/libs/bootstrap.min.js',
     app: 'app/assets/scripts/app.js',
   }

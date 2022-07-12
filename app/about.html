@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Meta description goes here.">
+    <meta name="author" content="Mahmoud El Helou">
+    <title>Document</title>
+    
+    <!-- Styles--><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/styles.css">
+  </head>
+  <body>
+    <!-- Fallback javascript-->
+    <noscript>
+      <div class="alert alert-danger" role="alert">The website may not work as intended to be, since there is a heavy depends on Javascript and now it's disabled in your browser, please <a class="alert-link" href="https://www.enable-javascript.com/" target="_blank">enable it</a>, then reload the page.</div>
+    </noscript>
+    
+    <!-- Navbar-->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light px-3 py-4">
+      <div class="container"><a class="navbar-brand" href="index.html">
+          <div class="navbar-brand__box"><img src="../assets/images/logo.png"></div></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item active"><a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          </ul>
+          <div class="ml-auto d-flex align-items-center">
+            <div class="search"><i class="fas fa-search search-btn"></i></div><a class="btn btn-link py-3" data-toggle="modal" data-target="#modalLoginForm">Login</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar-end-->
+    
+    <!-- About-->
+    <section class="about py-5">
+      <div class="container">
+        <h2 class="section-title">About BogoPal</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptas architecto est, illum eligendi blanditiis sunt quo laborum nobis, dolorum, nulla commodi animi at cupiditate.</p>
+      </div>
+    </section>
+    <!-- about-end-->
+    
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="footer__logo">
+              <h4>BogoPal</h4>
+              <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quaerat magni excepturi accusantium harum deserunt!</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="footer__links">
+              <h4>Quick Links</h4><a href="#">Home</a><a href="#">About</a><a href="#">Categories</a><a href="#">Terms and Conditions</a><a href="#">Privacy Policy</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h4>Download our App</h4><a href="#"></a><a href="#">Twitter</a><a href="#">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Search overlay-->
+    <div class="search-overlay">
+      <div class="search-overlay__content">
+        <h2 class="mb-5">Search for Bogos...</h2>
+        <div class="search-overlay__search-input">
+          <form>
+            <div class="input-group mt-3">
+              <input class="form-control" type="search" placeholder="Type the search keywords here..." name="s" autofocus>
+              <div class="input-group-append">
+                <div class="input-group-text" type="submit"><i class="fas fa-search"></i></div>
+              </div>
+            </div>
+          </form>
+        </div><i class="fas fa-times-circle search-overlay__close" aria-hidden="true"></i>
+      </div>
+    </div>
+    
+    <!-- Modals-->
+    <!-- Modals-->
+    <!-- Login/Register modal-->
+    <div class="modal fade w-100" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content px-3 py-4">
+          <div class="modal-header">
+            <div class="modal-header-tabs">
+              <div class="modal-header-tabs__tab active" id="login-form-title">
+                <h5 class="modal-title">Login</h5>
+              </div>
+              <div class="modal-header-tabs__tab" id="register-form-title">
+                <h5 class="modal-title">Register</h5>
+              </div>
+            </div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <div id="login-form">
+              <div class="text-center">
+                <h5 class="mb-1">We are glad to see you again!</h5>
+                <p class="text-muted">Don’t have an account? <a href="#" id="register-form-link">Sign Up!</a></p>
+              </div>
+              <form method="POST" action="#">
+                <div class="row mt-5 text-center">
+                  <div class="col-12 mb-3">
+                    <input class="form-control-lg" type="text" placeholder="Email" name="email" required>
+                  </div>
+                  <div class="col-12 mb-4">
+                    <input class="form-control-lg" type="password" placeholder="Password" name="password" required>
+                    <div class="my-3"><a href="" id="modal-forgot-password-link" data-toggle="modal" data-target="#modalForgotPassword" data-dismiss="modal">Forgot Password?</a></div>
+                    <button class="btn btn-primary px-5 py-2" type="submit">Login</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div id="register-form">
+              <div class="text-center">
+                <h5>Let's create your account!</h5>
+              </div>
+              <form method="POST" action="#">
+                <div class="row mt-5 text-center">
+                  <div class="col-12 mb-4">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                      <label class="btn btn-outline-primary px-3 mr-4 active">
+                        <input id="option1" type="radio" name="accountType" autocomplete="off" checked=""> Merchant
+                      </label>
+                      <label class="btn btn-outline-primary px-3 mr-4">
+                        <input id="option2" type="radio" name="accountType" autocomplete="off">Customer
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <input class="form-control-lg" type="text" placeholder="First Name" name="firstName" required>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <input class="form-control-lg" type="text" placeholder="Last Name" name="lastName" required>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <input class="form-control-lg" type="email" placeholder="Email" name="email" required>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <input class="form-control-lg" type="email" placeholder="Confirm Email" name="emailConfirm" required>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <input class="form-control-lg" type="password" placeholder="Password" name="password" required>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <input class="form-control-lg" type="password" placeholder="Password" name="passwordConfirm" required>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check my-3">
+                      <input class="form-check-input" type="checkbox" name="registerTerms" id="registerTerms">
+                      <label for="registerTerms">By continuing you accept our standard <a href="#">terms and conditions</a> and our <a href="#">privacy policy</a></label>
+                    </div>.
+                    <button class="btn btn-primary px-5 py-2" type="submit">Register</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- login-register-modal-end-->
+    
+    <!-- Forgot password modal-->
+    <div class="modal fade" id="modalForgotPassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content p-5">
+          <div class="modal-header">
+            <h5 class="modal-title">Reset password</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <form method="POST" action="#">
+              <div class="row mt-5 text-center">
+                <div class="col-12 mb-3">
+                  <p>Enter Your Email to Reset Your Password</p>
+                  <input class="form-control-lg" type="email" placeholder="ُEnter Your Email" name="email" required>
+                  <div class="my-4">
+                    <button class="btn btn-primary px-5 py-2" type="submit">Reset Password</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- forgot-password-modal-end-->
+    
+    
+    <!-- Scripts-->
+    <script src="./dist/bundled.js"></script>
+  </body>
+</html>

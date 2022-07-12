@@ -14,6 +14,7 @@ jQuery(function ($) {
     $('#login-form-title').removeClass('active')
   })
 
+  // Search overlay
   function openSearchOverlay() {
     $('.search-btn').click(function (e) {
       $('.search-overlay').addClass('search-overlay--active')
@@ -26,8 +27,6 @@ jQuery(function ($) {
         $('body').addClass('body-no-scroll')
       }
     })
-
-    $('.search-input').focus()
   }
 
   function closeSearchOverlay() {
@@ -47,4 +46,17 @@ jQuery(function ($) {
 
   openSearchOverlay()
   closeSearchOverlay()
+
+  // Sliders
+  const singleDealSlider = new Swiper('.swiper', {
+    loop: true,
+    speed: 1000,
+    autoplay: {
+      enabled: true,
+      delay: 5000,
+      disableOnInteraction: true,
+    },
+  })
+
+  $('#single-deal .swiper').singleDealSlider
 })
