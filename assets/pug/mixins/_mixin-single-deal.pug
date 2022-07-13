@@ -4,16 +4,19 @@ mixin deal(dealObj)
 			a(href='single-deal.html')
 				img.card-img(src= dealObj.img)
 			.card-body
-				.mb-3
-					span.font-weight-bold.mr-2 Category /
-					a(href="category.html")= dealObj.category
-				a.text-decoration-none.text-dark(href="#")
+				a.text-decoration-none.text-dark(href="single-deal.html")
 					h5.card-title= dealObj.title
-				p.text-muted= dealObj.description
-				.price.d-flex.justify-content-between.my-3
-					div
-						// old price
-						del.mr-2.text-muted= '$' + dealObj.oldPrice
-						// new price
-						span.font-weight-bold.text-success= '$' + dealObj.newPrice
-					span.font-italic= 'Save ' + (dealObj.newPrice / dealObj.oldPrice) * 100 + '%'
+				.mt-3.d-flex.justify-content-between
+					span
+						i.fas.fa-map-marker-alt.mr-2
+						| Navy Pier Parking Deals
+					span
+						i.fas.fa-star.mr-2
+						| 4.7
+				|
+				|
+				// Select featured or most popular deal for this business
+				.mt-4
+					small.text-muted.font-italic
+						| Popular deal
+					h6 Buy 1 Pizza and get 1 for FREE!

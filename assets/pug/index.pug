@@ -24,7 +24,11 @@ block content
 			h2.section-title.mb-4 Browse Our Categories
 			.row
 				include ./mixins/_mixin-single-category
-				for i in [1, 2, 3, 4, 5, 6, 7, 8]
+				+category({
+					img: 'https://api.lorem.space/image/watch',
+					title: 'Spa and Gym',
+				})
+				for i in [1, 2, 3, 4, 5, 6, 7]
 					+category({
 						img: 'https://api.lorem.space/image/watch',
 						title: 'Restaurants',

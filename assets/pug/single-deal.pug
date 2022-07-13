@@ -4,18 +4,9 @@ block content
   section#single-deal.py-5.single-deal
     .container
       // Single deal header
-      h1.mb-4 Navy Pier Parking Deals
-      .my-3.d-flex
-        span.mr-4
-          i.fas.fa-map-marker-alt.mr-2.text-primary
-          | Location: Navy Pier, New York
-        span
-          i.fas.fa-tags.mr-3.text-primary
-          | Category: &nbsp;
-          a(href="categories.html")
-            | Restaurants
+      h1.mb-4 Ali Restaurant
       .row
-        .col-md-9
+        .col-md-12
           .swiper
             .swiper-wrapper
               for n in [1, 2, 3, 4]
@@ -23,6 +14,24 @@ block content
                   img(src="https://api.lorem.space/image/watch?w=800&h=400")
           |
           |
+
+          .mt-4
+            span
+              i.fas.fa-map-marker-alt.mr-2.text-primary
+              | Navy Pier, New York
+          |
+          |
+          .ratings.d-flex.mt-4
+            h4.mr-3 4.7
+            .stars
+              .stars-icons
+                for n in [1, 2, 3, 4, 5]
+                  i.fas.fa-star
+              .stars-count
+                small 22 BogoPal Ratings
+        |
+        |
+        .col-md-9.order-2.order-md-1
           // single deal content
           .single-deal__content.pt-5
             h3.section-subtitle About Navy Pier Parking Deals
@@ -32,16 +41,8 @@ block content
           // single deal ratings
           .pt-5
             h3.section-subtitle BogoPal Customer Reviews
-            .ratings.d-flex.mt-4
-              h4.mr-3 4.7
-              .stars
-                .stars-icons
-                  for n in [1, 2, 3, 4, 5]
-                    i.fas.fa-star
-                .stars-count
-                  small 22 BogoPal Ratings
             .reviews.mt-4
-              for n in [1, 2, 3, 4, 5]
+              for n in [1, 2, 3, 5, 5]
                 .review
                   .review-header.d-flex
                     .review-header__avatar
@@ -62,11 +63,11 @@ block content
                             i.fas.fa-star
                           i.fas.fa-star-half-alt
                           i.far.fa-star
-        .col-md-3
+        .col-md-3.order-1.order-md-2
           h2.section-subtitle
             | Available Deals
           .deals
-            for n in [1, 2, 3, 4, 5]
+            for n in [1, 2, 3, 4]
               .deal.mt-4
                 img(src="https://api.lorem.space/image/watch?w=800&h=400")
                 .deal__body
