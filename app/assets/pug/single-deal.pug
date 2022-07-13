@@ -63,6 +63,25 @@ block content
                             i.fas.fa-star
                           i.fas.fa-star-half-alt
                           i.far.fa-star
+            |
+            |
+            // add a review
+            form(action="#" method="post")
+              .form-group
+                label.form-label
+                  | Add a review
+                input.form-input(type="text" name="name" placeholder="Your name")
+              .form-group
+                label.form-label
+                  | Add a review
+                input.form-input(type="text" name="email" placeholder="Your email")
+              .form-group
+                label.form-label
+                  | Add a review
+                textarea.form-input(name="review" placeholder="Your review")
+              .form-group
+                button.btn.btn-primary.btn-block
+                  | Add review
         .col-md-3.order-1.order-md-2
           h2.section-subtitle
             | Available Deals
