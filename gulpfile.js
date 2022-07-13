@@ -43,7 +43,7 @@ function styles() {
 function scripts() {
   const jsPath = {
     jquery: 'app/assets/scripts/libs/jquery.min.js',
-    bootstrap: 'app/assets/scripts/libs/swiper-bundle.min.js',
+    swiper: 'app/assets/scripts/libs/swiper-bundle.min.js',
     bootstrap: 'app/assets/scripts/libs/bootstrap.min.js',
     app: 'app/assets/scripts/app.js',
   }
@@ -87,13 +87,7 @@ function watchFiles() {
 
 // Deploy to Github pages
 function deploy() {
-  return src([
-    'app/*.html',
-    'app/dist/**/*',
-    'app/images/',
-    // "app/webfonts",
-    // "app/fonts",
-  ]).pipe(ghPages())
+  return src('app/**/*').pipe(ghPages())
 }
 
 exports.html = html

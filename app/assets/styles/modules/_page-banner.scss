@@ -1,0 +1,30 @@
+.page-banner {
+  height: 40vh;
+  background: $lightBgColor !important;
+
+  @include responsive(atLarge) {
+    height: 45vh;
+  }
+
+  &__content {
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+
+    @include responsive(atSmall) {
+      font-size: 2rem;
+      line-height: 1.5;
+    }
+  }
+}

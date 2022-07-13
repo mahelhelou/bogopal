@@ -3,6 +3,12 @@ body {
   overflow-x: hidden;
 }
 
+.modal.open {
+  body {
+    overflow-x: hidden;
+  }
+}
+
 body {
   font-family: 'Open Sans'sans-serif;
   color: #333;
@@ -24,17 +30,21 @@ img {
 section {
   .section-title {
     font-size: 1.5rem;
+    text-align: center;
 
     @include responsive(atMedium) {
       font-size: 1.75rem !important;
+      text-align: left;
     }
   }
 
   .section-subtitle {
     font-size: 1.25rem;
+    text-align: center;
 
     @include responsive(atMedium) {
       font-size: 1.5rem !important;
+      text-align: left;
     }
   }
 }
@@ -45,6 +55,20 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(0, 0, 0, .66);
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i.fas.fa-star,
+i.fas.fa-star-half-alt,
+i.far.fa-star {
+  color: #ffb400;
+}
+
+.fa-google-play,
+.fa-app-store {
+  font-size: 1.5rem;
+  color: $primary;
 }

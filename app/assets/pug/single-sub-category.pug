@@ -1,0 +1,19 @@
+extends ./layouts/page
+
+block pageBannerTitle
+	h1.page-banner__title Palestinian Restaurants
+block pageBannerDescription
+
+block content
+	section.py-5.deals
+		.container
+			.row
+				include ./mixins/_mixin-single-deal
+				for i in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+					+deal({
+						img: 'https://api.lorem.space/image/watch',
+						title: 'Lorem ipsum dolor sit amet',
+						description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
+						oldPrice: '10',
+						newPrice: '5',
+					})

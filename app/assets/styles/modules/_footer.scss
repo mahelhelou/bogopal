@@ -1,8 +1,16 @@
 .footer {
+  background: $lightBgColor;
+
   &__links {
     a {
       display: block;
       margin-bottom: 0.5rem;
     }
+  }
+
+  .fa-google-play,
+  .fa-app-store {
+    font-size: 2rem;
+    color: $primary;
   }
 }
