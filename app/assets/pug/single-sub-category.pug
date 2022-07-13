@@ -1,7 +1,7 @@
 extends ./layouts/page
 
 block pageBannerTitle
-	h1.page-banner__title Palestinian Restaurants
+	h1.page-banner__title Arabic Restaurants
 block pageBannerDescription
 
 block content
@@ -9,6 +9,13 @@ block content
 		.container
 			.row
 				include ./mixins/_mixin-single-deal
+				+deal({
+					img: 'https://api.lorem.space/image/watch',
+					title: 'Ali Restaurant',
+					description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
+					oldPrice: '10',
+					newPrice: '5',
+				})
 				for i in [1, 2, 3, 4, 5, 6, 7, 8, 9]
 					+deal({
 						img: 'https://api.lorem.space/image/watch',

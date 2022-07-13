@@ -1,4 +1,10 @@
 .single-deal {
+  .swiper {
+    img {
+      height: 400px;
+    }
+  }
+
   &__content {
     p {
       margin-top: 1rem;
@@ -38,6 +44,14 @@
         &__rating {
           display: flex;
         }
+      }
+    }
+  }
+
+  .deals {
+    .deal {
+      img {
+        height: 150px;
       }
     }
   }
