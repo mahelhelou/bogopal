@@ -6,3 +6,69 @@
 .btn-primary {
   background: $primary !important;
 }
+
+// Select2
+.select2 {
+  font-size: 1.5rem;
+  width: 10% !important;
+  font-weight: bold;
+  border: none !important;
+
+
+  &-selection {
+    background: $lightBgColor !important;
+    width: 100% !important;
+    border: none !important;
+
+    &[aria-expanded='true'] {
+      border: none !important;
+
+
+      .select2-selection__arrow {
+        transform: rotate(90deg) !important;
+        top: 25% !important;
+      }
+    }
+
+    &__rendered {
+      padding-left: 10px !important;
+      width: 100%;
+      height: 100%;
+      border: none !important;
+    }
+
+    &__arrow {
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      width: 25px !important;
+      transition: transform 0.3s ease-in-out, top .3s ease-in-out;
+
+      b {
+        display: none;
+      }
+
+      img {
+        display: inline-block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+span.select2-search {
+  padding: 1rem .5rem !important;
+
+  input.select2-search__field {
+    border: 2px solid $primary;
+
+    &:focus {
+      border: 2px solid $primary !important;
+      outline: none;
+    }
+  }
+}
+
+span.select2-results {
+  padding: 0.5rem !important;
+}

@@ -17,6 +17,17 @@ jQuery(function ($) {
   // Select2 for select boxes
   $('.js-example-basic-single').select2()
 
+  // Change select2 background color on click
+  $('.select2').click(function () {
+    // $('.select2-container').css('background-color', '#fff !important')
+    console.log($(this))
+  })
+
+  // Insert custom icon inside select2
+  $('.select2-selection__arrow').append(
+    '<img src="../assets/images/arrow-right.svg">'
+  )
+
   // Search overlay
   function openSearchOverlay() {
     $('.search-btn').click(function (e) {
