@@ -13,15 +13,12 @@
 
   #searchForDeals {
     input {
-      width: 20rem;
       height: 3rem;
-      // border: 1px solid $darkBgColor;
-      border-radius: 0.5rem;
-      padding: 0.5rem;
-      font-size: 1.5rem;
-      font-weight: bold;
-      // color: $darkBgColor;
-      background: $lightBgColor;
+      display: block;
+      margin: 1rem auto 0 auto;
+      border-radius: 25rem;
+      padding: 0.5rem 1.5rem;
+      width: 80%;
       transition: all 0.3s ease-in-out;
     }
   }
