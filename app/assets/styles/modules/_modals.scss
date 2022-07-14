@@ -25,6 +25,25 @@
   #register-form {
     display: none;
   }
+
+  .qr-code {
+    height: 250px;
+
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .fa-google-play,
+  .fa-app-store {
+    font-size: 3rem;
+    color: $primary;
+  }
+
+  .fa-apple {
+    font-size: 1.5rem;
+  }
 }
 
 .modal-open .modal {

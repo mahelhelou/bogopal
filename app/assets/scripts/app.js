@@ -14,6 +14,9 @@ jQuery(function ($) {
     $('#login-form-title').removeClass('active')
   })
 
+  // Select2 for select boxes
+  $('.js-example-basic-single').select2()
+
   // Search overlay
   function openSearchOverlay() {
     $('.search-btn').click(function (e) {

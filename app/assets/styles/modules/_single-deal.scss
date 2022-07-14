@@ -49,6 +49,9 @@
   }
 
   .deals {
+    max-height: 1200px !important;
+    overflow: auto;
+
     .deal {
       img {
         height: 150px;

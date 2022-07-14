@@ -45,6 +45,7 @@ function scripts() {
     jquery: 'app/assets/scripts/libs/jquery.min.js',
     swiper: 'app/assets/scripts/libs/swiper-bundle.min.js',
     bootstrap: 'app/assets/scripts/libs/bootstrap.min.js',
+    select2: 'app/assets/scripts/libs/select2.min.js',
     app: 'app/assets/scripts/app.js',
   }
   // return src([jsPath.jquery, jsPath.popper, jsPath.owl, jsPath.bootstrap, jsPath.app], { sourcemaps: true })
