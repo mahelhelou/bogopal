@@ -2,6 +2,7 @@
 @import 'libs/all.min.scss';
 @import 'libs/bootstrap.min.scss';
 @import 'libs/swiper-bundle.min.scss';
+@import 'libs/select2.min.scss';
 
 // Base
 @import 'base/mixins';
@@ -13,7 +14,7 @@
 @import 'modules/navbar';
 @import 'modules/hero';
 @import 'modules/categories';
-@import 'modules/page-banner';
+// @import 'modules/page-banner';
 @import 'modules/deals';
 @import 'modules/single-deal';
 @import 'modules/page';

@@ -10,4 +10,19 @@
     font-size: 2rem;
     margin-bottom: 1.5rem;
   }
+
+  #searchForDeals {
+    input {
+      width: 20rem;
+      height: 3rem;
+      // border: 1px solid $darkBgColor;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      // color: $darkBgColor;
+      background: $lightBgColor;
+      transition: all 0.3s ease-in-out;
+    }
+  }
 }
