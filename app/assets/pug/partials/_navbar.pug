@@ -17,15 +17,15 @@ nav.navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light.px-3.py-4
 					a.nav-link(href='categories.html') Categories
 				li.nav-item(class=activePage == 'about' ? 'active' : '')
 					a.nav-link(href='about.html') About
-			.ml-4
+			.ml-4.text-center.my-4.my-md-0
 				a(href="#" data-toggle="modal" data-target="#modalGooglePlayDownload")
 					i.fab.fa-google-play.mr-4
 				a(href="#" data-toggle="modal" data-target="#modalAppStoreDownload")
 					i.fab.fa-app-store
-			.ml-auto.d-flex.align-items-center
-				a.btn.btn-link.py-3(data-toggle="modal" data-target="#modalLoginForm") Login
-				a.btn.btn-link.py-3(data-toggle="modal" data-target="#modalLoginForm") Sign Up
-				.search.ml-3.mt-2
+			.ml-auto.d-flex.align-items-center.actions
+				a.btn.btn-link(data-toggle="modal" data-target="#modalLoginForm") Login
+				a.btn.btn-link(data-toggle="modal" data-target="#modalSignUpForm") Sign Up
+				.search.ml-3.ml-md-0.mt-3.mt-md-2
 					i.fas.fa-search.search-btn
 
 // navbar-end

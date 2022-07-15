@@ -7,8 +7,11 @@
   align-items: center;
 
   h1 {
-    font-size: 2rem;
     margin-bottom: 1.5rem;
+
+    @include responsive(atSmall) {
+      font-size: 2rem;
+    }
   }
 
   #searchForDeals {
@@ -21,7 +24,7 @@
       padding: 0.5rem 1.5rem;
       height: 3rem;
       display: block;
-      margin: 1rem auto 0 auto;
+      margin: 1rem auto 3rem auto;
       border-radius: 25rem;
       padding: 0.5rem 1.5rem;
       width: 80%;
