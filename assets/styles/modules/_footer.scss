@@ -1,6 +1,10 @@
 .footer {
   background: $lightBgColor;
 
+  @include responsive(atSmall) {
+    text-align: center;
+  }
+
   &__links {
     a {
       display: block;

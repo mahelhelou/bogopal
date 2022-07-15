@@ -9,16 +9,14 @@
 
 // Select2
 .select2 {
-  font-size: 1.5rem;
-  width: 10% !important;
-  font-weight: bold;
-  border: none !important;
-
+  width: 250px !important;
+  height: 55px;
 
   &-selection {
-    background: $lightBgColor !important;
     width: 100% !important;
+    height: 100% !important;
     border: none !important;
+    background-color: $lightBgColor !important;
 
     &[aria-expanded='true'] {
       border: none !important;
@@ -31,15 +29,22 @@
     }
 
     &__rendered {
+      font-size: 1.5rem;
       padding-left: 10px !important;
-      width: 100% !important;
-      // height: 100%;
-      border: none !important;
+      width: 100%;
+      height: 100%;
+      line-height: 55px !important;
+      font-weight: bold;
+
+      @include responsive(atSmall) {
+        font-size: 1.33rem;
+      }
     }
 
     &__arrow {
       top: 50% !important;
       transform: translateY(-50%) !important;
+      right: .5rem !important;
       width: 25px !important;
       transition: transform 0.3s ease-in-out, top .3s ease-in-out;
 
@@ -53,17 +58,17 @@
       }
     }
   }
-}
 
+  &-container {
+    border: none !important;
+  }
+}
 
 span.select2-search {
   padding: 1rem .5rem !important;
 
   input.select2-search__field {
-    border: 2px solid $primary;
-
     &:focus {
-      border: 2px solid $primary !important;
       outline: none;
     }
   }

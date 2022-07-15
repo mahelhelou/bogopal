@@ -30,9 +30,9 @@
             <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           </ul>
-          <div class="ml-4"><a href="#" data-toggle="modal" data-target="#modalGooglePlayDownload"><i class="fab fa-google-play mr-4"></i></a><a href="#" data-toggle="modal" data-target="#modalAppStoreDownload"><i class="fab fa-app-store"></i></a></div>
-          <div class="ml-auto d-flex align-items-center"><a class="btn btn-link py-3" data-toggle="modal" data-target="#modalLoginForm">Login</a><a class="btn btn-link py-3" data-toggle="modal" data-target="#modalLoginForm">Sign Up</a>
-            <div class="search ml-3 mt-2"><i class="fas fa-search search-btn"></i></div>
+          <div class="ml-4 text-center my-4 my-md-0"><a href="#" data-toggle="modal" data-target="#modalGooglePlayDownload"><i class="fab fa-google-play mr-4"></i></a><a href="#" data-toggle="modal" data-target="#modalAppStoreDownload"><i class="fab fa-app-store"></i></a></div>
+          <div class="ml-auto d-flex align-items-center actions"><a class="btn btn-link" data-toggle="modal" data-target="#modalLoginForm">Login</a><a class="btn btn-link" data-toggle="modal" data-target="#modalSignUpForm">Sign Up</a>
+            <div class="search ml-3 ml-md-0 mt-3 mt-md-2"><i class="fas fa-search search-btn"></i></div>
           </div>
         </div>
       </div>
@@ -43,7 +43,7 @@
     <section class="hero">
       <div class="container">
         <div class="text-center">
-          <h1>Find Bogos in...</h1>
+          <h1 class="display-4 font-weight-light">Find Bogos in...</h1>
           <form id="searchForDeals" action="#" method="get">
             <div class="d-flex justify-content-center">
               <select class="js-example-basic-single" name="type">
@@ -153,18 +153,18 @@
     <footer class="footer py-5">
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4 mt-4 mt-md-0">
             <div class="footer__logo">
               <h4>BogoPal</h4>
               <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quaerat magni excepturi accusantium harum deserunt!</p>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 mt-4 mt-md-0">
             <div class="footer__links">
               <h4>Quick Links</h4><a href="index.html">Home</a><a href="categories.html">Categories</a><a href="about.html">About</a><a href="terms.html">Terms and Conditions</a><a href="privacy.html">Privacy Policy</a>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 mt-4 mt-md-0">
             <h4>Download our App</h4>
             <div class="mt-4"><a href="#" data-toggle="modal" data-target="#modalGooglePlayDownload"><i class="fab fa-google-play fa-2x mr-3"></i></a><a href="#" data-toggle="modal" data-target="#modalAppStoreDownload"><i class="fab fa-app-store fa-2x"></i></a></div>
           </div>
@@ -187,26 +187,18 @@
     
     <!-- Modals-->
     <!-- Modals-->
-    <!-- Login/Register modal-->
+    <!-- Login modal-->
     <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content px-3 py-4">
-          <div class="modal-header">
-            <div class="modal-header-tabs">
-              <div class="modal-header-tabs__tab active" id="login-form-title">
-                <h5 class="modal-title">Login</h5>
-              </div>
-              <div class="modal-header-tabs__tab" id="register-form-title">
-                <h5 class="modal-title">Register</h5>
-              </div>
-            </div>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          </div>
           <div class="modal-body">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="false">&times;</span></button>
+            <h2 class="font-weight-light text-center mb-4">Login</h2>
             <div id="login-form">
               <div class="text-center">
                 <h5 class="mb-1">We are glad to see you again!</h5>
-                <p class="text-muted">Don’t have an account? <a href="#" id="register-form-link">Sign Up!</a></p>
+                <p class="text-muted">
+                  Don’t have an account? <a href="#" data-toggle="modal" data-target="#modalSignUpForm" data-dismiss="modal">Sign Up</a>!</p>
               </div>
               <form method="POST" action="#">
                 <div class="row mt-5 text-center">
@@ -221,22 +213,27 @@
                 </div>
               </form>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- login-register-modal-end-->
+    
+    <!-- Sign up modal-->
+    <div class="modal fade" id="modalSignUpForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content px-3 py-4">
+          <div class="modal-body">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="false">&times;</span></button>
+            <h2 class="font-weight-light text-center mb-4">Sign Up</h2>
             <div id="register-form">
               <div class="text-center">
                 <h5>Let's create your account!</h5>
+                <p class="text-muted">
+                  Already have an account? <a href="#" data-toggle="modal" data-target="#modalLoginForm" data-dismiss="modal">Login</a>!</p>
               </div>
               <form method="POST" action="#">
                 <div class="row mt-5 text-center">
-                  <div class="col-12 mb-4">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                      <label class="btn btn-outline-primary px-3 mr-4 active">
-                        <input id="option1" type="radio" name="accountType" autocomplete="off" checked=""> Merchant
-                      </label>
-                      <label class="btn btn-outline-primary px-3 mr-4">
-                        <input id="option2" type="radio" name="accountType" autocomplete="off">Customer
-                      </label>
-                    </div>
-                  </div>
                   <div class="col-12 mb-3">
                     <input class="form-control-lg" type="text" placeholder="First Name" name="firstName" required>
                   </div>
@@ -247,18 +244,14 @@
                     <input class="form-control-lg" type="email" placeholder="Email" name="email" required>
                   </div>
                   <div class="col-12 mb-3">
-                    <input class="form-control-lg" type="email" placeholder="Confirm Email" name="emailConfirm" required>
-                  </div>
-                  <div class="col-12 mb-3">
                     <input class="form-control-lg" type="password" placeholder="Password" name="password" required>
                   </div>
-                  <div class="col-12 mb-3">
-                    <input class="form-control-lg" type="password" placeholder="Password" name="passwordConfirm" required>
-                  </div>
                   <div class="col-12">
+                    <p class="text-muted">
+                      Are you merchant? Sign up <a href="#" data-toggle="modal" data-target="#modalMerchantSignUpForm" data-dismiss="modal">here</a>!</p>
                     <div class="form-check my-3">
                       <input class="form-check-input" type="checkbox" name="registerTerms" id="registerTerms">
-                      <label for="registerTerms">By continuing you accept our standard <a href="#">terms and conditions</a> and our <a href="#">privacy policy</a></label>
+                      <label for="registerTerms">By continuing you accept our standard <a href="terms.html">terms and conditions</a> and our <a href="privacy.html">privacy policy</a></label>
                     </div>.
                     <button class="btn btn-primary px-5 py-2" type="submit">Register</button>
                   </div>
@@ -269,17 +262,58 @@
         </div>
       </div>
     </div>
-    <!-- login-register-modal-end-->
+    <!-- sign-up-modal-end-->
+    
+    <!-- Sign up merchant modal-->
+    <div class="modal fade" id="modalMerchantSignUpForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content px-3 py-4">
+          <div class="modal-body">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="false">&times;</span></button>
+            <h2 class="font-weight-light text-center mb-4">Sign Up as Merchant</h2>
+            <div id="register-form">
+              <div class="text-center">
+                <h5>Boost your business with a merchant account!</h5>
+                <p class="text-muted">
+                  Already have an account? <a href="#" data-toggle="modal" data-target="#modalLoginForm" data-dismiss="modal">Login</a>!</p>
+              </div>
+              <form method="POST" action="#">
+                <div class="row mt-5 text-center">
+                  <div class="col-12 mb-3">
+                    <input class="form-control-lg" type="text" placeholder="Store Name" name="firstName" required>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <input class="form-control-lg" type="text" placeholder="Last Name" name="lastName" required>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <input class="form-control-lg" type="email" placeholder="Email" name="email" required>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <input class="form-control-lg" type="password" placeholder="Password" name="password" required>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check my-3">
+                      <input class="form-check-input" type="checkbox" name="registerTerms" id="registerTerms">
+                      <label for="registerTerms">By continuing you accept our standard <a href="terms.html">terms and conditions</a> and our <a href="privacy.html">privacy policy</a></label>
+                    </div>.
+                    <button class="btn btn-primary px-5 py-2" type="submit">Register</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- sign-up-modal-end-->
     
     <!-- Forgot password modal-->
     <div class="modal fade" id="modalForgotPassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content p-5">
-          <div class="modal-header">
-            <h5 class="modal-title">Reset password</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          </div>
           <div class="modal-body">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h2 class="font-weight-light text-center mb-4">Reset password</h2>
             <form method="POST" action="#">
               <div class="row mt-5 text-center">
                 <div class="col-12 mb-3">
