@@ -19,7 +19,7 @@ jQuery(function ($) {
 
   // Insert custom icon inside select2
   $('.select2-selection__arrow').append(
-    '<img src="../assets/images/arrow-right.svg">'
+    '<img src="assets/images/arrow-right.svg">'
   )
 
   // Insert custom icon inside select2
