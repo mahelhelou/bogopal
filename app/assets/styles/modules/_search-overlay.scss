@@ -33,7 +33,6 @@
   }
 
   &__content {
-
     h2 {
       font-size: 2rem;
 
@@ -45,32 +44,13 @@
     .search-overlay__search-input {
       .input-group {
         .form-control {
+          border-radius: 50rem;
           width: 75%;
-          height: 3rem;
-          border-radius: 0;
-          padding-right: 1.5rem;
+          padding-left: 1.5rem;
 
           @include responsive(atMedium) {
             width: 400px;
             height: 4rem;
-          }
-        }
-
-        .input-group-text {
-          width: 3.5rem;
-          display: flex;
-          // background: $mainOrange;
-          color: #fff;
-          border: none;
-          cursor: pointer;
-
-          @include responsive(atMedium) {
-            width: 5rem;
-          }
-
-          i {
-            margin: auto;
-            font-size: 1.625rem;
           }
         }
       }

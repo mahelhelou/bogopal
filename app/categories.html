@@ -11,6 +11,7 @@
     <!-- Styles--><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,700&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="assets/images/logo.png">
     <link rel="stylesheet" href="./dist/styles.css">
   </head>
   <body>
@@ -31,8 +32,8 @@
             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           </ul>
           <div class="ml-4 text-center my-4 my-md-0"><a href="#" data-toggle="modal" data-target="#modalGooglePlayDownload"><i class="fab fa-google-play mr-4"></i></a><a href="#" data-toggle="modal" data-target="#modalAppStoreDownload"><i class="fab fa-app-store"></i></a></div>
-          <div class="ml-auto d-flex align-items-center actions"><a class="btn btn-link" data-toggle="modal" data-target="#modalLoginForm">Login</a><a class="btn btn-link" data-toggle="modal" data-target="#modalSignUpForm">Sign Up</a>
-            <div class="search ml-3 ml-md-0 mt-3 mt-md-2"><i class="fas fa-search search-btn"></i></div>
+          <div class="ml-auto d-flex align-items-center actions"><a class="btn btn-link" data-toggle="modal" data-target="#modalLoginForm">Login</a><a class="btn btn-link" data-toggle="modal" data-target="#modalSignUpForm">Sign Up</a><a class="btn btn-link" data-toggle="modal" data-target="#modalSignUpForm">Merchant</a>
+            <div class="search ml-0 ml-md-3 mt-3 mt-md-2"><i class="fas fa-search search-btn"></i></div>
           </div>
         </div>
       </div>
@@ -43,11 +44,11 @@
     <section class="hero">
       <div class="container">
         <div class="text-center">
-          <h1 class="display-4 font-weight-light">Find Bogos in...</h1>
+          <h1 class="display-4 font-weight-light my-4">Find Bogos in...</h1>
           <form id="searchForDeals" action="#" method="get">
             <div class="d-flex justify-content-center">
               <select class="js-example-basic-single" name="type">
-                <option value="all_categories">Chicago</option>
+                <option value="all_states1">Chicago</option>
                 <option value="1">New York</option>
                 <option value="2">Los Anglos</option>
                 <option value="3">Alaska</option>
@@ -162,7 +163,7 @@
         <div class="search-overlay__search-input">
           <form action="#" method="get">
             <div class="input-group mt-3">
-              <input class="form-control" type="search" placeholder="Type the search keywords here..." name="s" autofocus>
+              <input class="form-control" type="search" placeholder="Search in BogoPal" name="s" autofocus>
             </div>
           </form>
         </div><i class="fas fa-times-circle search-overlay__close" aria-hidden="true"></i>
@@ -193,6 +194,21 @@
                     <input class="form-control-lg" type="password" placeholder="Password" name="password" required>
                     <div class="my-3"><a href="" id="modal-forgot-password-link" data-toggle="modal" data-target="#modalForgotPassword" data-dismiss="modal">Forgot Password?</a></div>
                     <button class="btn btn-primary px-5 py-2" type="submit">Login</button>
+                  </div>
+                  
+                  <!-- Social login-->
+                  <div class="social-login">
+                    <div class="row mt-5 text-center">
+                      <div class="col-12 mb-3">
+                        <button class="btn btn-primary px-5 py-2 fb-btn" type="button"><i class="fab fa-facebook-f mr-3"></i>Facebook</button>
+                      </div>
+                      <div class="col-12 mb-3">
+                        <button class="btn btn-primary px-5 py-2 google-btn" type="button"><i class="fab fa-google mr-3"></i>Google</button>
+                      </div>
+                      <div class="col-12 mb-3">
+                        <button class="btn btn-primary px-5 py-2 twitter-btn" type="button"><i class="fab fa-twitter mr-3"></i>Twitter</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </form>
@@ -237,7 +253,22 @@
                       <input class="form-check-input" type="checkbox" name="registerTerms" id="registerTerms">
                       <label for="registerTerms">By continuing you accept our standard <a href="terms.html">terms and conditions</a> and our <a href="privacy.html">privacy policy</a></label>
                     </div>.
-                    <button class="btn btn-primary px-5 py-2" type="submit">Register</button>
+                    <button class="btn btn-primary px-5 py-2" type="submit">Sign Up</button>
+                  </div>
+                  
+                  <!-- Social login-->
+                  <div class="social-login">
+                    <div class="row mt-5 text-center">
+                      <div class="col-12 mb-3">
+                        <button class="btn btn-primary px-5 py-2 fb-btn" type="button"><i class="fab fa-facebook-f mr-3"></i>Facebook</button>
+                      </div>
+                      <div class="col-12 mb-3">
+                        <button class="btn btn-primary px-5 py-2 google-btn" type="button"><i class="fab fa-google mr-3"></i>Google</button>
+                      </div>
+                      <div class="col-12 mb-3">
+                        <button class="btn btn-primary px-5 py-2 twitter-btn" type="button"><i class="fab fa-twitter mr-3"></i>Twitter</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </form>
@@ -264,23 +295,83 @@
               <form method="POST" action="#">
                 <div class="row mt-5 text-center">
                   <div class="col-12 mb-3">
-                    <input class="form-control-lg" type="text" placeholder="Store Name" name="firstName" required>
+                    <input class="form-control-lg" type="text" placeholder="Store Name" name="storetName" required>
                   </div>
                   <div class="col-12 mb-3">
-                    <input class="form-control-lg" type="text" placeholder="Last Name" name="lastName" required>
+                    <input class="form-control-lg" type="number" placeholder="Store Phone" name="storePhone" required>
                   </div>
                   <div class="col-12 mb-3">
-                    <input class="form-control-lg" type="email" placeholder="Email" name="email" required>
+                    <select class="js-example-basic-single" name="storeCategory">
+                      <option value="categories">Store Category</option>
+                      <option value="1">New York</option>
+                      <option value="2">Los Anglos</option>
+                      <option value="3">Alaska</option>
+                    </select>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <input class="form-control-lg" type="email" placeholder="Password" name="storeEmail" required>
                   </div>
                   <div class="col-12 mb-3">
                     <input class="form-control-lg" type="password" placeholder="Password" name="password" required>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <input class="form-control-lg" type="password" placeholder="Re-Enter Password" name="confirmPassword" required>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <input class="form-control-lg" type="password" placeholder="Store Address" name="storeAddress" required>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <select class="js-example-basic-single" name="storeCountry">
+                      <option value="store_country">Store Country</option>
+                      <option value="1">New York</option>
+                      <option value="2">Los Anglos</option>
+                      <option value="3">Alaska</option>
+                    </select>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <div class="row">
+                      <div class="col-md-4 mb-4 mb-md-0">
+                        <select class="js-example-basic-single" name="storeState">
+                          <option value="all_states1">Store State</option>
+                          <option value="1">New York</option>
+                          <option value="2">Los Anglos</option>
+                          <option value="3">Alaska</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4 mb-4 mb-md-0">
+                        <select class="js-example-basic-single" name="storeCity">
+                          <option value="all_states1">Store City</option>
+                          <option value="1">New York</option>
+                          <option value="2">Los Anglos</option>
+                          <option value="3">Alaska</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4 mb-4 mb-md-0">
+                        <input class="form-control-lg" type="text" placeholder="Store Zip Code" name="storeZipCode" required>
+                      </div>
+                    </div>
                   </div>
                   <div class="col-12">
                     <div class="form-check my-3">
                       <input class="form-check-input" type="checkbox" name="registerTerms" id="registerTerms">
                       <label for="registerTerms">By continuing you accept our standard <a href="terms.html">terms and conditions</a> and our <a href="privacy.html">privacy policy</a></label>
                     </div>.
-                    <button class="btn btn-primary px-5 py-2" type="submit">Register</button>
+                    <button class="btn btn-primary px-5 py-2" type="submit">Sign Up</button>
+                  </div>
+                  
+                  <!-- Social login-->
+                  <div class="social-login">
+                    <div class="row mt-5 text-center">
+                      <div class="col-12 mb-3">
+                        <button class="btn btn-primary px-5 py-2 fb-btn" type="button"><i class="fab fa-facebook-f mr-3"></i>Facebook</button>
+                      </div>
+                      <div class="col-12 mb-3">
+                        <button class="btn btn-primary px-5 py-2 google-btn" type="button"><i class="fab fa-google mr-3"></i>Google</button>
+                      </div>
+                      <div class="col-12 mb-3">
+                        <button class="btn btn-primary px-5 py-2 twitter-btn" type="button"><i class="fab fa-twitter mr-3"></i>Twitter</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </form>
@@ -289,7 +380,7 @@
         </div>
       </div>
     </div>
-    <!-- sign-up-modal-end-->
+    <!-- sign-up-merchant-modal-end-->
     
     <!-- Forgot password modal-->
     <div class="modal fade" id="modalForgotPassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

@@ -1,4 +1,6 @@
 .modal {
+  overflow-y: auto;
+
   .close {
     span {
       font-size: 2rem;
@@ -23,8 +25,51 @@
   .fa-apple {
     font-size: 1.5rem;
   }
+
+  // social login
+  .social-login {
+    button {
+      border-radius: 50px;
+      // padding: 10px 20px;
+      color: #fff;
+    }
+
+    .fb-btn {
+      transition: all 0.3s ease-in-out;
+      background: #3b5998 !important;
+
+      &:hover {
+        background: #2d4373 !important;
+      }
+    }
+
+    .google-btn {
+      transition: all 0.3s ease-in-out;
+      background: #dd4b39 !important;
+
+      &:hover {
+        background: #c23321 !important;
+      }
+    }
+
+    .twitter-btn {
+      transition: all 0.3s ease-in-out;
+      background: #55acee !important;
+
+      &:hover {
+        background: #2d8dc7 !important;
+      }
+    }
+  }
+
+  .select2 {
+    &__rendered {
+      font-weight: normal !important;
+      font-size: 1rem !important;
+    }
+  }
 }
 
 .modal-open .modal {
-  overflow-y: scroll;
+  overflow-y: auto;
 }
