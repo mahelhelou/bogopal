@@ -63,20 +63,13 @@
   }
 
   .select2 {
-    &-selection {
-      &__rendered {
-        font-weight: normal !important;
-        font-size: 1rem !important;
-        padding-left: 10px !important;
-        width: 100%;
-        height: 100%;
-        line-height: 55px !important;
-        font-weight: bold;
-      }
+    &__rendered {
+      font-weight: normal !important;
+      font-size: 1rem !important;
     }
   }
 }
 
 .modal-open .modal {
-  overflow-y: scroll;
+  overflow-y: auto;
 }
