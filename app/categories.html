@@ -31,9 +31,12 @@
             <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           </ul>
-          <div class="ml-4 text-center my-4 my-md-0"><a href="#" data-toggle="modal" data-target="#modalGooglePlayDownload"><i class="fab fa-google-play mr-4"></i></a><a href="#" data-toggle="modal" data-target="#modalAppStoreDownload"><i class="fab fa-app-store"></i></a></div>
+          <div class="ml-4 text-center my-4 my-md-0">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#modalAppDownload">Download App</button>
+          </div>
           <div class="ml-auto d-flex align-items-center actions"><a class="btn btn-link" data-toggle="modal" data-target="#modalLoginForm">Login</a><a class="btn btn-link" data-toggle="modal" data-target="#modalSignUpForm">Sign Up</a>
-            <div class="dropdown"><a class="btn btn-link dropdown-toggle" href="#" role="button" data-toggle="#merchantLogin" aria-haspopup="true" aria-expanded="false"><span>Merchant</span></a>
+            <!-- navbar dropdown-->
+            <div class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="merchantLogin"><span>Merchant</span></a>
               <ul class="dropdown-menu" aria-labelledby="merchantLogin"><a class="dropdown-item" href="#">Login</a><a class="dropdown-item" href="#">Sign Up</a></ul>
             </div>
             <div class="search ml-0 ml-md-3 mt-3 mt-md-2"><i class="fas fa-search search-btn"></i></div>
@@ -403,45 +406,29 @@
     </div>
     <!-- forgot-password-modal-end-->
     
-    <!-- Google play modal-->
-    <div class="modal fade" id="modalGooglePlayDownload" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <!-- App download modal-->
+    <div class="modal fade" id="modalAppDownload" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content p-5">
-          <div class="modal-header">
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          </div>
           <div class="modal-body">
-            <div class="mb-3 text-center"><i class="fab fa-google-play fa-4x text-primary"></i></div>
-            <h5 class="modal-title">Download BogoPal for<span class="text-primary">&nbsp; Android</span></h5>
-            <div class="qr-code mt-4 d-flex align-items-center justify-content-center"><img class="m-auto" src="assets/images/qr-code.jpg"></div>
-            <div class="mt-4 text-center">
-              <h5>Is your phone&nbsp;<i class="fab fa-apple"></i>?</h5><a href="#" data-toggle="modal" data-target="#modalAppStoreDownload" data-dismiss="modal">Download for IOS</a>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h2 class="font-weight-light text-center mb-4">Download BogoPal App</h2>
+            <div class="my-4">
+              <div class="row">
+                <div class="col-md-6">
+                  <button class="btn btn-light px-5 py-2"><i class="fab fa-apple mr-3"></i>IOS</button>
+                </div>
+                <div class="col-md-6">
+                  <button class="btn btn-light px-5 py-2"><i class="fab fa-google-play mr-3"></i>Android</button>
+                </div>
+              </div>
             </div>
+            <div class="qr-code mt-4 d-flex align-items-center justify-content-center"><img class="m-auto" src="assets/images/qr-code.jpg"></div>
           </div>
         </div>
       </div>
     </div>
-    <!-- google-play-modal-end-->
-    
-    <!-- App store modal-->
-    <div class="modal fade" id="modalAppStoreDownload" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content p-5">
-          <div class="modal-header">
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          </div>
-          <div class="modal-body">
-            <div class="mb-3 text-center"><i class="fab fa-app-store fa-4x text-primary"></i></div>
-            <h5 class="modal-title">Download BogoPal for<span class="text-primary">&nbsp; IOS</span></h5>
-            <div class="qr-code mt-4 d-flex align-items-center justify-content-center"><img class="m-auto" src="assets/images/qr-code.jpg"></div>
-            <div class="mt-4 text-center">
-              <h5>Is your phone Android?</h5><a href="#" data-toggle="modal" data-target="#modalGooglePlayDownload" data-dismiss="modal">Download for Android</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- google-play-modal-end-->
+    <!-- app-download-modal-end-->
     
     <!-- Scripts-->
     <script src="./dist/bundled.js"></script>

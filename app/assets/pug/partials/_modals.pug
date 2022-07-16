@@ -186,47 +186,24 @@
 // forgot-password-modal-end
 |
 |
-// Google play modal
-#modalGooglePlayDownload.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
+// App download modal
+#modalAppDownload.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
 	.modal-dialog(role='document')
 		.modal-content.p-5
-			.modal-header
+			.modal-body
 				button.close(type='button' data-dismiss='modal' aria-label='Close')
 					span(aria-hidden='true') &times;
-			.modal-body
-				.mb-3.text-center
-					i.fab.fa-google-play.fa-4x.text-primary
-				h5.modal-title Download BogoPal for
-					span.text-primary &nbsp; Android
+				h2.font-weight-light.text-center.mb-4 Download BogoPal App
+				.my-4
+					.row
+						.col-md-6
+							button.btn.btn-light.px-5.py-2
+								i.fab.fa-apple.mr-3
+								| IOS
+						.col-md-6
+							button.btn.btn-light.px-5.py-2
+								i.fab.fa-google-play.mr-3
+								| Android
 				.qr-code.mt-4.d-flex.align-items-center.justify-content-center
 					img.m-auto(src="assets/images/qr-code.jpg")
-				.mt-4.text-center
-					h5 Is your phone&nbsp;
-						i.fab.fa-apple
-						| ?
-					a(href="#" data-toggle="modal" data-target="#modalAppStoreDownload" data-dismiss="modal") Download for IOS
-
-
-// google-play-modal-end
-|
-|
-// App store modal
-#modalAppStoreDownload.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
-	.modal-dialog(role='document')
-		.modal-content.p-5
-			.modal-header
-				button.close(type='button' data-dismiss='modal' aria-label='Close')
-					span(aria-hidden='true') &times;
-			.modal-body
-				.mb-3.text-center
-					i.fab.fa-app-store.fa-4x.text-primary
-				h5.modal-title Download BogoPal for
-					span.text-primary &nbsp; IOS
-				.qr-code.mt-4.d-flex.align-items-center.justify-content-center
-					img.m-auto(src="assets/images/qr-code.jpg")
-				.mt-4.text-center
-					h5 Is your phone Android?
-					a(href="#" data-toggle="modal" data-target="#modalGooglePlayDownload" data-dismiss="modal") Download for Android
-
-
-// google-play-modal-end
+// app-download-modal-end
