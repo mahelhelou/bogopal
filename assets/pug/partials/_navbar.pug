@@ -18,15 +18,18 @@ nav.navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light.px-3.py-4
 				li.nav-item(class=activePage == 'about' ? 'active' : '')
 					a.nav-link(href='about.html') About
 			.ml-4.text-center.my-4.my-md-0
-				a(href="#" data-toggle="modal" data-target="#modalGooglePlayDownload")
-					i.fab.fa-google-play.mr-4
-				a(href="#" data-toggle="modal" data-target="#modalAppStoreDownload")
-					i.fab.fa-app-store
+				button.btn.btn-primary(data-toggle="modal" data-target="#modalAppDownload") Download App
 			.ml-auto.d-flex.align-items-center.actions
 				a.btn.btn-link(data-toggle="modal" data-target="#modalLoginForm") Login
 				a.btn.btn-link(data-toggle="modal" data-target="#modalSignUpForm") Sign Up
-				a.btn.btn-link(data-toggle="modal" data-target="#modalSignUpForm") Merchant
+				// navbar dropdown
+
+				.nav-item.dropdown
+					a.nav-link.dropdown-toggle(href='#' id='merchantLogin')
+						span Merchant
+					ul.dropdown-menu(aria-labelledby="merchantLogin")
+						a.dropdown-item(href='#') Login
+						a.dropdown-item(href='#') Sign Up
 				.search.ml-0.ml-md-3.mt-3.mt-md-2
 					i.fas.fa-search.search-btn
-
 // navbar-end

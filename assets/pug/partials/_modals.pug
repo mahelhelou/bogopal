@@ -19,14 +19,17 @@
 								input.form-control-lg(type='text' placeholder='Email' name='email' required)
 							.col-12.mb-4
 								input.form-control-lg(type='password' placeholder='Password' name='password' required)
-								.my-3
+								.mt-3
 									a(href="" id="modal-forgot-password-link" data-toggle="modal" data-target="#modalForgotPassword" data-dismiss="modal") Forgot Password?
 								button.btn.btn-primary.px-5.py-2(type="submit") Login
 							|
 							|
 							// Social login
-							.social-login
-								.row.mt-5.text-center
+							.social-login.mt-4.text-center
+								h5.text-muted.font-italic.mb-3
+									| Or login with
+									|
+								.row
 									.col-12.mb-3
 										button.btn.btn-primary.px-5.py-2.fb-btn(type="button")
 											i.fab.fa-facebook-f.mr-3
@@ -39,7 +42,7 @@
 										button.btn.btn-primary.px-5.py-2.twitter-btn(type="button")
 											i.fab.fa-twitter.mr-3
 											| Twitter
-// login-register-modal-end
+// login-modal-end
 |
 |
 // Sign up modal
@@ -59,15 +62,15 @@
 					form(method="POST" action="#")
 						.row.mt-5.text-center
 							.col-12.mb-3
-								input.form-control-lg(type='text' placeholder="First Name" name="firstName" required)
-							.col-12.mb-3
-								input.form-control-lg(type='text' placeholder="Last Name" name="lastName" required)
+								input.form-control-lg(type='text' placeholder="Full Name" name="fulltName" required)
 							.col-12.mb-3
 								input.form-control-lg(type='email' placeholder="Email" name="email" required)
 							.col-12.mb-3
 								input.form-control-lg(type='password' placeholder="Password" name="password" required)
-							.col-12
-								p.text-muted Are you merchant? Sign up <a href="#" data-toggle="modal" data-target="#modalMerchantSignUpForm" data-dismiss="modal">here</a>
+							.col-12.mb-3
+								input.form-control-lg(type='password' placeholder="Re-Enter Password" name="confirmPassword" required)
+							.col-12.mb-3
+								p.text-muted Are you a merchant? Sign up <a href="#" data-toggle="modal" data-target="#modalMerchantSignUpForm" data-dismiss="modal">here</a>
 									| !
 								.form-check.my-3
 									input.form-check-input(type='checkbox' name='registerTerms' id='registerTerms')
@@ -77,8 +80,11 @@
 							|
 							|
 							// Social login
-							.social-login
-								.row.mt-5.text-center
+							.social-login.mt-4.text-center
+								h5.text-muted.font-italic.mb-3
+									| Or login with
+									|
+								.row
 									.col-12.mb-3
 										button.btn.btn-primary.px-5.py-2.fb-btn(type="button")
 											i.fab.fa-facebook-f.mr-3
@@ -115,41 +121,37 @@
 							.col-12.mb-3
 								input.form-control-lg(type='number' placeholder="Store Phone" name="storePhone" required)
 							.col-12.mb-3
+								input.form-control-lg(type='text' placeholder="Store Address" name="storeAddress" required)
+							.col-12.mb-3
+								input.form-control-lg(type='email' placeholder="Email" name="email" required)
+							.col-12.mb-3
+								input.form-control-lg(type='password' placeholder="Password" name="password" required)
+							.col-12.mb-3
+								input.form-control-lg(type='password' placeholder="Re-Enter Password" name="confirmPassword" required)
+							.col-12.mb-3
 								select.js-example-basic-single(name="storeCategory")
 									option(value="categories") Store Category
 									option(value="1") New York
 									option(value="2") Los Anglos
 									option(value="3") Alaska
 							.col-12.mb-3
-								input.form-control-lg(type='email' placeholder="Password" name="storeEmail" required)
+								select.js-example-basic-single(name="storeState")
+									option(value="all_states1") Store State
+									option(value="1") New York
+									option(value="2") Los Anglos
+									option(value="3") Alaska
 							.col-12.mb-3
-								input.form-control-lg(type='password' placeholder="Password" name="password" required)
-							.col-12.mb-3
-								input.form-control-lg(type='password' placeholder="Re-Enter Password" name="confirmPassword" required)
-							.col-12.mb-3
-								input.form-control-lg(type='password' placeholder="Store Address" name="storeAddress" required)
+								select.js-example-basic-single(name="storeCity")
+									option(value="all_states1") Store City
+									option(value="1") New York
+									option(value="2") Los Anglos
+									option(value="3") Alaska
 							.col-12.mb-3
 								select.js-example-basic-single(name="storeCountry")
 									option(value="store_country") Store Country
 									option(value="1") New York
 									option(value="2") Los Anglos
 									option(value="3") Alaska
-							.col-12.mb-3
-								.row
-									.col-md-4.mb-4.mb-md-0
-										select.js-example-basic-single(name="storeState")
-											option(value="all_states1") Store State
-											option(value="1") New York
-											option(value="2") Los Anglos
-											option(value="3") Alaska
-									.col-md-4.mb-4.mb-md-0
-										select.js-example-basic-single(name="storeCity")
-											option(value="all_states1") Store City
-											option(value="1") New York
-											option(value="2") Los Anglos
-											option(value="3") Alaska
-									.col-md-4.mb-4.mb-md-0
-										input.form-control-lg(type='text' placeholder="Store Zip Code" name="storeZipCode" required)
 							.col-12
 								.form-check.my-3
 									input.form-check-input(type='checkbox' name='registerTerms' id='registerTerms')
@@ -158,21 +160,6 @@
 								button.btn.btn-primary.px-5.py-2(type="submit") Sign Up
 							|
 							|
-							// Social login
-							.social-login
-								.row.mt-5.text-center
-									.col-12.mb-3
-										button.btn.btn-primary.px-5.py-2.fb-btn(type="button")
-											i.fab.fa-facebook-f.mr-3
-											| Facebook
-									.col-12.mb-3
-										button.btn.btn-primary.px-5.py-2.google-btn(type="button")
-											i.fab.fa-google.mr-3
-											| Google
-									.col-12.mb-3
-										button.btn.btn-primary.px-5.py-2.twitter-btn(type="button")
-											i.fab.fa-twitter.mr-3
-											| Twitter
 // sign-up-merchant-modal-end
 |
 |
@@ -195,47 +182,49 @@
 // forgot-password-modal-end
 |
 |
-// Google play modal
-#modalGooglePlayDownload.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
+// App download modal
+#modalAppDownload.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
 	.modal-dialog(role='document')
 		.modal-content.p-5
-			.modal-header
+			.modal-body
 				button.close(type='button' data-dismiss='modal' aria-label='Close')
 					span(aria-hidden='true') &times;
-			.modal-body
-				.mb-3.text-center
-					i.fab.fa-google-play.fa-4x.text-primary
-				h5.modal-title Download BogoPal for
-					span.text-primary &nbsp; Android
+				h2.font-weight-light.text-center.mb-4 Download BogoPal App
+				h3.font-weight-light.my-3.text-center (IOS)
+				.my-5
+					.row
+						.col-md-6.mt-3.mt-md-0
+							button.btn.btn-block.btn-light.px-3.py-2(data-toggle="modal" data-target="#modalAppDownload" data-dismiss="modal")
+								i.fab.fa-apple.mr-3
+								| IOS
+						.col-md-6.mt-3.mt-md-0
+							button.btn.btn-block.btn-light.px-3.py-2(data-toggle="modal" data-target="#modalGoogleDownload" data-dismiss="modal")
+								i.fab.fa-google-play.mr-3
+								| Android
 				.qr-code.mt-4.d-flex.align-items-center.justify-content-center
 					img.m-auto(src="assets/images/qr-code.jpg")
-				.mt-4.text-center
-					h5 Is your phone&nbsp;
-						i.fab.fa-apple
-						| ?
-					a(href="#" data-toggle="modal" data-target="#modalAppStoreDownload" data-dismiss="modal") Download for IOS
-
-
-// google-play-modal-end
+// app-download-modal-end
 |
 |
-// App store modal
-#modalAppStoreDownload.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
+// Google download modal
+#modalGoogleDownload.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
 	.modal-dialog(role='document')
 		.modal-content.p-5
-			.modal-header
+			.modal-body
 				button.close(type='button' data-dismiss='modal' aria-label='Close')
 					span(aria-hidden='true') &times;
-			.modal-body
-				.mb-3.text-center
-					i.fab.fa-app-store.fa-4x.text-primary
-				h5.modal-title Download BogoPal for
-					span.text-primary &nbsp; IOS
+				h2.font-weight-light.text-center.mb-4 Download BogoPal App
+				h3.font-weight-light.my-3.text-center (Android)
+				.my-5
+					.row
+						.col-md-6.mt-3.mt-md-0
+							button.btn.btn-block.btn-light.px-3.py-2(data-toggle="modal" data-target="#modalAppDownload" data-dismiss="modal")
+								i.fab.fa-apple.mr-3
+								| IOS
+						.col-md-6.mt-3.mt-md-0
+							button.btn.btn-block.btn-light.px-3.py-2(data-toggle="modal" data-target="#modalGoogleDownload" data-dismiss="modal")
+								i.fab.fa-google-play.mr-3
+								| Android
 				.qr-code.mt-4.d-flex.align-items-center.justify-content-center
 					img.m-auto(src="assets/images/qr-code.jpg")
-				.mt-4.text-center
-					h5 Is your phone Android?
-					a(href="#" data-toggle="modal" data-target="#modalGooglePlayDownload" data-dismiss="modal") Download for Android
-
-
-// google-play-modal-end
+// google-download-modal-end
