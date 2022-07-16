@@ -36,9 +36,10 @@
           </div>
           <div class="ml-auto d-flex align-items-center actions"><a class="btn btn-link" data-toggle="modal" data-target="#modalLoginForm">Login</a><a class="btn btn-link" data-toggle="modal" data-target="#modalSignUpForm">Sign Up</a>
             <!-- navbar dropdown-->
-            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="merchantLogin"><span>Merchant</span></a>
-              <ul class="dropdown-menu" aria-labelledby="merchantLogin"><a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalLoginForm" data-dismiss="modal">Login</a><a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalMerchantSignUp" data-dismiss="modal">Sign Up</a></ul>
-            </li>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Merchant</button>
+            <div class="dropdown-menu"><a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalLoginForm">Login</a><a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalMerchantSignUpForm">Sign Up</a></div>
             <div class="search ml-0 ml-md-3 mt-3 mt-md-2"><i class="fas fa-search search-btn"></i></div>
           </div>
         </div>
@@ -239,7 +240,7 @@
         <div class="modal-content px-3 py-4">
           <div class="modal-body">
             <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="false">&times;</span></button>
-            <h2 class="font-weight-light text-center mb-4">Sign Up as Merchant</h2>
+            <h2 class="font-weight-light text-center mb-4">Sign Up as a Merchant</h2>
             <div id="register-form">
               <div class="text-center">
                 <h5>Boost your business with a merchant account!</h5>
