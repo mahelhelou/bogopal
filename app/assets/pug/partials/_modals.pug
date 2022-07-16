@@ -19,14 +19,17 @@
 								input.form-control-lg(type='text' placeholder='Email' name='email' required)
 							.col-12.mb-4
 								input.form-control-lg(type='password' placeholder='Password' name='password' required)
-								.my-3
+								.mt-3
 									a(href="" id="modal-forgot-password-link" data-toggle="modal" data-target="#modalForgotPassword" data-dismiss="modal") Forgot Password?
 								button.btn.btn-primary.px-5.py-2(type="submit") Login
 							|
 							|
 							// Social login
-							.social-login
-								.row.mt-5.text-center
+							.social-login.mt-4.text-center
+								h5.text-muted.font-italic.mb-3
+									| Or login with
+									|
+								.row
 									.col-12.mb-3
 										button.btn.btn-primary.px-5.py-2.fb-btn(type="button")
 											i.fab.fa-facebook-f.mr-3
@@ -39,7 +42,7 @@
 										button.btn.btn-primary.px-5.py-2.twitter-btn(type="button")
 											i.fab.fa-twitter.mr-3
 											| Twitter
-// login-register-modal-end
+// login-modal-end
 |
 |
 // Sign up modal
@@ -59,15 +62,15 @@
 					form(method="POST" action="#")
 						.row.mt-5.text-center
 							.col-12.mb-3
-								input.form-control-lg(type='text' placeholder="First Name" name="firstName" required)
-							.col-12.mb-3
-								input.form-control-lg(type='text' placeholder="Last Name" name="lastName" required)
+								input.form-control-lg(type='text' placeholder="Full Name" name="fulltName" required)
 							.col-12.mb-3
 								input.form-control-lg(type='email' placeholder="Email" name="email" required)
 							.col-12.mb-3
 								input.form-control-lg(type='password' placeholder="Password" name="password" required)
-							.col-12
-								p.text-muted Are you merchant? Sign up <a href="#" data-toggle="modal" data-target="#modalMerchantSignUpForm" data-dismiss="modal">here</a>
+							.col-12.mb-3
+								input.form-control-lg(type='password' placeholder="Re-Enter Password" name="confirmPassword" required)
+							.col-12.mb-3
+								p.text-muted Are you a merchant? Sign up <a href="#" data-toggle="modal" data-target="#modalMerchantSignUpForm" data-dismiss="modal">here</a>
 									| !
 								.form-check.my-3
 									input.form-check-input(type='checkbox' name='registerTerms' id='registerTerms')
@@ -77,8 +80,11 @@
 							|
 							|
 							// Social login
-							.social-login
-								.row.mt-5.text-center
+							.social-login.mt-4.text-center
+								h5.text-muted.font-italic.mb-3
+									| Or login with
+									|
+								.row
 									.col-12.mb-3
 										button.btn.btn-primary.px-5.py-2.fb-btn(type="button")
 											i.fab.fa-facebook-f.mr-3
@@ -158,21 +164,6 @@
 								button.btn.btn-primary.px-5.py-2(type="submit") Sign Up
 							|
 							|
-							// Social login
-							.social-login
-								.row.mt-5.text-center
-									.col-12.mb-3
-										button.btn.btn-primary.px-5.py-2.fb-btn(type="button")
-											i.fab.fa-facebook-f.mr-3
-											| Facebook
-									.col-12.mb-3
-										button.btn.btn-primary.px-5.py-2.google-btn(type="button")
-											i.fab.fa-google.mr-3
-											| Google
-									.col-12.mb-3
-										button.btn.btn-primary.px-5.py-2.twitter-btn(type="button")
-											i.fab.fa-twitter.mr-3
-											| Twitter
 // sign-up-merchant-modal-end
 |
 |
