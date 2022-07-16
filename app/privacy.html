@@ -36,9 +36,10 @@
           </div>
           <div class="ml-auto d-flex align-items-center actions"><a class="btn btn-link" data-toggle="modal" data-target="#modalLoginForm">Login</a><a class="btn btn-link" data-toggle="modal" data-target="#modalSignUpForm">Sign Up</a>
             <!-- navbar dropdown-->
-            <div class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="merchantLogin"><span>Merchant</span></a>
-              <ul class="dropdown-menu" aria-labelledby="merchantLogin"><a class="dropdown-item" href="#">Login</a><a class="dropdown-item" href="#">Sign Up</a></ul>
-            </div>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Merchant</button>
+            <div class="dropdown-menu"><a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalLoginForm">Login</a><a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalMerchantSignUpForm">Sign Up</a></div>
             <div class="search ml-0 ml-md-3 mt-3 mt-md-2"><i class="fas fa-search search-btn"></i></div>
           </div>
         </div>
@@ -95,7 +96,9 @@
           </div>
           <div class="col-md-4 mt-4 mt-md-0">
             <h4>Download our App</h4>
-            <div class="mt-4"><a href="#" data-toggle="modal" data-target="#modalGooglePlayDownload"><i class="fab fa-google-play fa-2x mr-3"></i></a><a href="#" data-toggle="modal" data-target="#modalAppStoreDownload"><i class="fab fa-app-store fa-2x"></i></a></div>
+            <div class="mt-4">
+              <button class="btn-primary py-2 px-3" data-toggle="modal" data-target="#modalAppDownload">Download App</button>
+            </div>
           </div>
         </div>
       </div>
@@ -137,7 +140,7 @@
                   <div class="col-12 mb-4">
                     <input class="form-control-lg" type="password" placeholder="Password" name="password" required>
                     <div class="mt-3"><a href="" id="modal-forgot-password-link" data-toggle="modal" data-target="#modalForgotPassword" data-dismiss="modal">Forgot Password?</a></div>
-                    <button class="btn btn-primary px-5 py-2" type="submit">Login</button>
+                    <button class="btn btn-primary px-5 py-2 mt-3" type="submit">Login</button>
                   </div>
                   
                   <!-- Social login-->
@@ -207,7 +210,7 @@
                   <!-- Social login-->
                   <div class="social-login mt-4 text-center">
                     <h5 class="text-muted font-italic mb-3">
-                      Or login with
+                      Or sign up with
                       
                     </h5>
                     <div class="row">
@@ -237,7 +240,7 @@
         <div class="modal-content px-3 py-4">
           <div class="modal-body">
             <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="false">&times;</span></button>
-            <h2 class="font-weight-light text-center mb-4">Sign Up as Merchant</h2>
+            <h2 class="font-weight-light text-center mb-4">Sign Up as a Merchant</h2>
             <div id="register-form">
               <div class="text-center">
                 <h5>Boost your business with a merchant account!</h5>

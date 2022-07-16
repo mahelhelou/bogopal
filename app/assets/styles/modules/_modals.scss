@@ -57,8 +57,22 @@
     }
   }
 
+  .form-control-lg {
+    border: 1px solid $primary !important;
+
+    &:focus {
+      border: 1px solid $primary !important;
+    }
+
+    &:placeholder {
+      font-size: 1rem !important;
+    }
+  }
+
   .select2 {
     &-selection {
+      border: 1px solid $primary !important;
+
       &__rendered {
         font-weight: normal !important;
         font-size: 1rem !important;
