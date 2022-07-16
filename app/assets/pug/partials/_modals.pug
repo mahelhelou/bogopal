@@ -121,41 +121,37 @@
 							.col-12.mb-3
 								input.form-control-lg(type='number' placeholder="Store Phone" name="storePhone" required)
 							.col-12.mb-3
+								input.form-control-lg(type='text' placeholder="Store Address" name="storeAddress" required)
+							.col-12.mb-3
+								input.form-control-lg(type='email' placeholder="Email" name="email" required)
+							.col-12.mb-3
+								input.form-control-lg(type='password' placeholder="Password" name="password" required)
+							.col-12.mb-3
+								input.form-control-lg(type='password' placeholder="Re-Enter Password" name="confirmPassword" required)
+							.col-12.mb-3
 								select.js-example-basic-single(name="storeCategory")
 									option(value="categories") Store Category
 									option(value="1") New York
 									option(value="2") Los Anglos
 									option(value="3") Alaska
 							.col-12.mb-3
-								input.form-control-lg(type='email' placeholder="Password" name="storeEmail" required)
+								select.js-example-basic-single(name="storeState")
+									option(value="all_states1") Store State
+									option(value="1") New York
+									option(value="2") Los Anglos
+									option(value="3") Alaska
 							.col-12.mb-3
-								input.form-control-lg(type='password' placeholder="Password" name="password" required)
-							.col-12.mb-3
-								input.form-control-lg(type='password' placeholder="Re-Enter Password" name="confirmPassword" required)
-							.col-12.mb-3
-								input.form-control-lg(type='password' placeholder="Store Address" name="storeAddress" required)
+								select.js-example-basic-single(name="storeCity")
+									option(value="all_states1") Store City
+									option(value="1") New York
+									option(value="2") Los Anglos
+									option(value="3") Alaska
 							.col-12.mb-3
 								select.js-example-basic-single(name="storeCountry")
 									option(value="store_country") Store Country
 									option(value="1") New York
 									option(value="2") Los Anglos
 									option(value="3") Alaska
-							.col-12.mb-3
-								.row
-									.col-md-4.mb-4.mb-md-0
-										select.js-example-basic-single(name="storeState")
-											option(value="all_states1") Store State
-											option(value="1") New York
-											option(value="2") Los Anglos
-											option(value="3") Alaska
-									.col-md-4.mb-4.mb-md-0
-										select.js-example-basic-single(name="storeCity")
-											option(value="all_states1") Store City
-											option(value="1") New York
-											option(value="2") Los Anglos
-											option(value="3") Alaska
-									.col-md-4.mb-4.mb-md-0
-										input.form-control-lg(type='text' placeholder="Store Zip Code" name="storeZipCode" required)
 							.col-12
 								.form-check.my-3
 									input.form-check-input(type='checkbox' name='registerTerms' id='registerTerms')
@@ -194,16 +190,41 @@
 				button.close(type='button' data-dismiss='modal' aria-label='Close')
 					span(aria-hidden='true') &times;
 				h2.font-weight-light.text-center.mb-4 Download BogoPal App
-				.my-4
+				h3.font-weight-light.my-3.text-center (IOS)
+				.my-5
 					.row
-						.col-md-6
-							button.btn.btn-light.px-5.py-2
+						.col-md-6.mt-3.mt-md-0
+							button.btn.btn-block.btn-light.px-3.py-2(data-toggle="modal" data-target="#modalAppDownload" data-dismiss="modal")
 								i.fab.fa-apple.mr-3
 								| IOS
-						.col-md-6
-							button.btn.btn-light.px-5.py-2
+						.col-md-6.mt-3.mt-md-0
+							button.btn.btn-block.btn-light.px-3.py-2(data-toggle="modal" data-target="#modalGoogleDownload" data-dismiss="modal")
 								i.fab.fa-google-play.mr-3
 								| Android
 				.qr-code.mt-4.d-flex.align-items-center.justify-content-center
 					img.m-auto(src="assets/images/qr-code.jpg")
 // app-download-modal-end
+|
+|
+// Google download modal
+#modalGoogleDownload.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
+	.modal-dialog(role='document')
+		.modal-content.p-5
+			.modal-body
+				button.close(type='button' data-dismiss='modal' aria-label='Close')
+					span(aria-hidden='true') &times;
+				h2.font-weight-light.text-center.mb-4 Download BogoPal App
+				h3.font-weight-light.my-3.text-center (Android)
+				.my-5
+					.row
+						.col-md-6.mt-3.mt-md-0
+							button.btn.btn-block.btn-light.px-3.py-2(data-toggle="modal" data-target="#modalAppDownload" data-dismiss="modal")
+								i.fab.fa-apple.mr-3
+								| IOS
+						.col-md-6.mt-3.mt-md-0
+							button.btn.btn-block.btn-light.px-3.py-2(data-toggle="modal" data-target="#modalGoogleDownload" data-dismiss="modal")
+								i.fab.fa-google-play.mr-3
+								| Android
+				.qr-code.mt-4.d-flex.align-items-center.justify-content-center
+					img.m-auto(src="assets/images/qr-code.jpg")
+// google-download-modal-end

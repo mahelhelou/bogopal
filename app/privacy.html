@@ -253,15 +253,10 @@
                     <input class="form-control-lg" type="number" placeholder="Store Phone" name="storePhone" required>
                   </div>
                   <div class="col-12 mb-3">
-                    <select class="js-example-basic-single" name="storeCategory">
-                      <option value="categories">Store Category</option>
-                      <option value="1">New York</option>
-                      <option value="2">Los Anglos</option>
-                      <option value="3">Alaska</option>
-                    </select>
+                    <input class="form-control-lg" type="text" placeholder="Store Address" name="storeAddress" required>
                   </div>
                   <div class="col-12 mb-3">
-                    <input class="form-control-lg" type="email" placeholder="Password" name="storeEmail" required>
+                    <input class="form-control-lg" type="email" placeholder="Email" name="email" required>
                   </div>
                   <div class="col-12 mb-3">
                     <input class="form-control-lg" type="password" placeholder="Password" name="password" required>
@@ -270,7 +265,28 @@
                     <input class="form-control-lg" type="password" placeholder="Re-Enter Password" name="confirmPassword" required>
                   </div>
                   <div class="col-12 mb-3">
-                    <input class="form-control-lg" type="password" placeholder="Store Address" name="storeAddress" required>
+                    <select class="js-example-basic-single" name="storeCategory">
+                      <option value="categories">Store Category</option>
+                      <option value="1">New York</option>
+                      <option value="2">Los Anglos</option>
+                      <option value="3">Alaska</option>
+                    </select>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <select class="js-example-basic-single" name="storeState">
+                      <option value="all_states1">Store State</option>
+                      <option value="1">New York</option>
+                      <option value="2">Los Anglos</option>
+                      <option value="3">Alaska</option>
+                    </select>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <select class="js-example-basic-single" name="storeCity">
+                      <option value="all_states1">Store City</option>
+                      <option value="1">New York</option>
+                      <option value="2">Los Anglos</option>
+                      <option value="3">Alaska</option>
+                    </select>
                   </div>
                   <div class="col-12 mb-3">
                     <select class="js-example-basic-single" name="storeCountry">
@@ -279,29 +295,6 @@
                       <option value="2">Los Anglos</option>
                       <option value="3">Alaska</option>
                     </select>
-                  </div>
-                  <div class="col-12 mb-3">
-                    <div class="row">
-                      <div class="col-md-4 mb-4 mb-md-0">
-                        <select class="js-example-basic-single" name="storeState">
-                          <option value="all_states1">Store State</option>
-                          <option value="1">New York</option>
-                          <option value="2">Los Anglos</option>
-                          <option value="3">Alaska</option>
-                        </select>
-                      </div>
-                      <div class="col-md-4 mb-4 mb-md-0">
-                        <select class="js-example-basic-single" name="storeCity">
-                          <option value="all_states1">Store City</option>
-                          <option value="1">New York</option>
-                          <option value="2">Los Anglos</option>
-                          <option value="3">Alaska</option>
-                        </select>
-                      </div>
-                      <div class="col-md-4 mb-4 mb-md-0">
-                        <input class="form-control-lg" type="text" placeholder="Store Zip Code" name="storeZipCode" required>
-                      </div>
-                    </div>
                   </div>
                   <div class="col-12">
                     <div class="form-check my-3">
@@ -351,13 +344,14 @@
           <div class="modal-body">
             <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h2 class="font-weight-light text-center mb-4">Download BogoPal App</h2>
-            <div class="my-4">
+            <h3 class="font-weight-light my-3 text-center">(IOS)</h3>
+            <div class="my-5">
               <div class="row">
-                <div class="col-md-6">
-                  <button class="btn btn-light px-5 py-2"><i class="fab fa-apple mr-3"></i>IOS</button>
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <button class="btn btn-block btn-light px-3 py-2" data-toggle="modal" data-target="#modalAppDownload" data-dismiss="modal"><i class="fab fa-apple mr-3"></i>IOS</button>
                 </div>
-                <div class="col-md-6">
-                  <button class="btn btn-light px-5 py-2"><i class="fab fa-google-play mr-3"></i>Android</button>
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <button class="btn btn-block btn-light px-3 py-2" data-toggle="modal" data-target="#modalGoogleDownload" data-dismiss="modal"><i class="fab fa-google-play mr-3"></i>Android</button>
                 </div>
               </div>
             </div>
@@ -367,6 +361,31 @@
       </div>
     </div>
     <!-- app-download-modal-end-->
+    
+    <!-- Google download modal-->
+    <div class="modal fade" id="modalGoogleDownload" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content p-5">
+          <div class="modal-body">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h2 class="font-weight-light text-center mb-4">Download BogoPal App</h2>
+            <h3 class="font-weight-light my-3 text-center">(Android)</h3>
+            <div class="my-5">
+              <div class="row">
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <button class="btn btn-block btn-light px-3 py-2" data-toggle="modal" data-target="#modalAppDownload" data-dismiss="modal"><i class="fab fa-apple mr-3"></i>IOS</button>
+                </div>
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <button class="btn btn-block btn-light px-3 py-2" data-toggle="modal" data-target="#modalGoogleDownload" data-dismiss="modal"><i class="fab fa-google-play mr-3"></i>Android</button>
+                </div>
+              </div>
+            </div>
+            <div class="qr-code mt-4 d-flex align-items-center justify-content-center"><img class="m-auto" src="assets/images/qr-code.jpg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- google-download-modal-end-->
     
     <!-- Scripts-->
     <script src="./dist/bundled.js"></script>

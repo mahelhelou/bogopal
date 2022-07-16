@@ -58,9 +58,12 @@
   }
 
   .select2 {
-    &__rendered {
-      font-weight: normal !important;
-      font-size: 1rem !important;
+    &-selection {
+      &__rendered {
+        font-weight: normal !important;
+        font-size: 1rem !important;
+        text-align: left !important;
+      }
     }
   }
 }
