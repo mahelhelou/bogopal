@@ -1,0 +1,16 @@
+extends ./layouts/page
+
+block pageTitle
+	title BogoPal | Arabic Restaurants
+
+//- block pageBannerTitle
+//- 	h1.page-banner__title Arabic Restaurants
+//- block pageBannerDescription
+
+block content
+	include ./mixins/_mixin-deals
+	// All deals
+	+deals({
+		title: 'All Deals of Ali Restaurant'
+	})
+	// all-deals-end
