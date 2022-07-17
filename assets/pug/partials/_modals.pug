@@ -82,7 +82,7 @@
 							// Social login
 							.social-login.mt-4.text-center
 								h5.text-muted.font-italic.mb-3
-									| Or sign up with
+									| Or login with
 									|
 								.row
 									.col-12.mb-3
@@ -100,6 +100,32 @@
 // sign-up-modal-end
 |
 |
+// Login modal
+#modalMerchantLoginForm.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
+	.modal-dialog(role='document')
+		.modal-content.px-3.py-4
+			.modal-body
+				button.close(type='button' data-dismiss='modal' aria-label='Close')
+					span(aria-hidden='false') &times;
+				h2.font-weight-light.text-center.mb-4
+					| Login
+				#login-form
+					.text-center
+						h5.mb-1 We are glad to see you again!
+						p.text-muted Don’t have an account? <a href="#" data-toggle="modal" data-target="#modalMerchantSignUpForm" data-dismiss="modal">Sign Up</a>
+							| !
+					form(method="POST" action="#")
+						.row.mt-5.text-center
+							.col-12.mb-3
+								input.form-control-lg(type='text' placeholder='Email' name='email' required)
+							.col-12.mb-4
+								input.form-control-lg(type='password' placeholder='Password' name='password' required)
+								.mt-3
+									a(href="" id="modal-forgot-password-link" data-toggle="modal" data-target="#modalForgotPassword" data-dismiss="modal") Forgot Password?
+								button.btn.btn-primary.px-5.py-2.mt-3(type="submit") Login
+// login-merchant-modal-end
+|
+|
 // Sign up merchant modal
 #modalMerchantSignUpForm.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
 	.modal-dialog(role='document')
@@ -108,7 +134,7 @@
 				button.close(type='button' data-dismiss='modal' aria-label='Close')
 					span(aria-hidden='false') &times;
 				h2.font-weight-light.text-center.mb-4
-					| Sign Up as a Merchant
+					| Sign Up as Merchant
 				#register-form
 					.text-center
 						h5 Boost your business with a merchant account!
@@ -194,13 +220,17 @@
 				.my-5
 					.row
 						.col-md-6.mt-3.mt-md-0
-							button.btn.btn-block.btn-light.px-3.py-2(data-toggle="modal" data-target="#modalAppDownload" data-dismiss="modal")
-								i.fab.fa-apple.mr-3
-								| IOS
+							button.btn.btn-dark.btn-block.px-3.py-2.app-download(data-toggle="modal" data-target="#modalAppDownload" data-dismiss="modal")
+								i.fab.fa-apple.app-download__icon
+								.app-download__text
+									span.app-download__text-title Get it in
+									span.app-download__text-subtitle App Store
 						.col-md-6.mt-3.mt-md-0
-							button.btn.btn-block.btn-light.px-3.py-2(data-toggle="modal" data-target="#modalGoogleDownload" data-dismiss="modal")
-								i.fab.fa-google-play.mr-3
-								| Android
+							button.btn.btn-dark.btn-block.px-3.py-2.app-download(data-toggle="modal" data-target="#modalGoogleDownload" data-dismiss="modal")
+								i.fab.fa-google-play.app-download__icon
+								.app-download__text
+									span.app-download__text-title Get it in
+									span.app-download__text-subtitle Google Play
 				.qr-code.mt-4.d-flex.align-items-center.justify-content-center
 					img.m-auto(src="assets/images/qr-code.jpg")
 // app-download-modal-end
@@ -218,13 +248,17 @@
 				.my-5
 					.row
 						.col-md-6.mt-3.mt-md-0
-							button.btn.btn-block.btn-light.px-3.py-2(data-toggle="modal" data-target="#modalAppDownload" data-dismiss="modal")
-								i.fab.fa-apple.mr-3
-								| IOS
+							button.btn.btn-dark.btn-block.px-3.py-2.app-download(data-toggle="modal" data-target="#modalAppDownload" data-dismiss="modal")
+								i.fab.fa-apple.app-download__icon
+								.app-download__text
+									span.app-download__text-title Get it in
+									span.app-download__text-subtitle App Store
 						.col-md-6.mt-3.mt-md-0
-							button.btn.btn-block.btn-light.px-3.py-2(data-toggle="modal" data-target="#modalGoogleDownload" data-dismiss="modal")
-								i.fab.fa-google-play.mr-3
-								| Android
+							button.btn.btn-dark.btn-block.px-3.py-2.app-download(data-toggle="modal" data-target="#modalGoogleDownload" data-dismiss="modal")
+								i.fab.fa-google-play.app-download__icon
+								.app-download__text
+									span.app-download__text-title Get it in
+									span.app-download__text-subtitle Google Play
 				.qr-code.mt-4.d-flex.align-items-center.justify-content-center
 					img.m-auto(src="assets/images/qr-code.jpg")
 // google-download-modal-end
