@@ -138,7 +138,7 @@
 				#register-form
 					.text-center
 						h5 Boost your business with a merchant account!
-						p.text-muted Already have an account? <a href="#" data-toggle="modal" data-target="#modalLoginForm" data-dismiss="modal">Login</a>
+						p.text-muted Already have an account? <a href="#" data-toggle="modal" data-target="#modalMerchantLoginForm" data-dismiss="modal">Login</a>
 							| !
 					form(method="POST" action="#")
 						.row.mt-5.text-center
@@ -215,18 +215,17 @@
 			.modal-body
 				button.close(type='button' data-dismiss='modal' aria-label='Close')
 					span(aria-hidden='true') &times;
-				h2.font-weight-light.text-center.mb-4 Download BogoPal App
-				h3.font-weight-light.my-3.text-center (IOS)
+				h2.mb-4.text-center IOS
 				.my-5
 					.row
 						.col-md-6.mt-3.mt-md-0
-							button.btn.btn-dark.btn-block.px-3.py-2.app-download(data-toggle="modal" data-target="#modalAppDownload" data-dismiss="modal")
+							button.btn.btn-dark.btn-block.px-3.py-2.app-download(data-toggle="modal" data-target="#modalAppDownload")
 								i.fab.fa-apple.app-download__icon
 								.app-download__text
 									span.app-download__text-title Get it in
 									span.app-download__text-subtitle App Store
 						.col-md-6.mt-3.mt-md-0
-							button.btn.btn-dark.btn-block.px-3.py-2.app-download(data-toggle="modal" data-target="#modalGoogleDownload" data-dismiss="modal")
+							button.btn.btn-dark.btn-block.px-3.py-2.app-download(data-toggle="modal" data-target="#modalGoogleDownload")
 								i.fab.fa-google-play.app-download__icon
 								.app-download__text
 									span.app-download__text-title Get it in
@@ -243,18 +242,17 @@
 			.modal-body
 				button.close(type='button' data-dismiss='modal' aria-label='Close')
 					span(aria-hidden='true') &times;
-				h2.font-weight-light.text-center.mb-4 Download BogoPal App
-				h3.font-weight-light.my-3.text-center (Android)
+				h2.mb-4.text-center Android
 				.my-5
 					.row
 						.col-md-6.mt-3.mt-md-0
-							button.btn.btn-dark.btn-block.px-3.py-2.app-download(data-toggle="modal" data-target="#modalAppDownload" data-dismiss="modal")
+							button.btn.btn-dark.btn-block.px-3.py-2.app-download(data-toggle="modal" data-target="#modalAppDownload")
 								i.fab.fa-apple.app-download__icon
 								.app-download__text
 									span.app-download__text-title Get it in
 									span.app-download__text-subtitle App Store
 						.col-md-6.mt-3.mt-md-0
-							button.btn.btn-dark.btn-block.px-3.py-2.app-download(data-toggle="modal" data-target="#modalGoogleDownload" data-dismiss="modal")
+							button.btn.btn-dark.btn-block.px-3.py-2.app-download(data-toggle="modal" data-target="#modalGoogleDownload")
 								i.fab.fa-google-play.app-download__icon
 								.app-download__text
 									span.app-download__text-title Get it in
