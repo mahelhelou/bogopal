@@ -30,7 +30,7 @@ nav.navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light.px-3.py-4
 				a.btn.btn-link(data-toggle="modal" data-target="#modalSignUpForm") Sign Up
 
 				// navbar dropdown
-			.text-center
+			.d-flex.flex-column.flex-md-row.justify-content-center.align-items-center
 				.btn-group
 					button.btn.btn-link.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
 						| Merchant
@@ -38,6 +38,6 @@ nav.navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light.px-3.py-4
 						a.dropdown-item(href='#' data-toggle='modal' data-target='#modalMerchantLoginForm') Login
 						a.dropdown-item(href='#' data-toggle='modal' data-target='#modalMerchantSignUpForm') Sign Up
 
-				.search.mt-3.mt-md-2.mx-auto
+				.search.mt-3.mt-md-2.ml-0.ml-md-2
 					i.fas.fa-search.search-btn
 // navbar-end
