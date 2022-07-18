@@ -17,19 +17,27 @@ nav.navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light.px-3.py-4
 					a.nav-link(href='categories.html') Categories
 				li.nav-item(class=activePage == 'about' ? 'active' : '')
 					a.nav-link(href='about.html') About
-			.ml-4.text-center.my-4.my-md-0
-				button.btn.btn-primary(data-toggle="modal" data-target="#modalAppDownload") Download App
+			.text-center.my-4.my-md-0.d-flex.flex-column.flex-md-row.justify-content-center.justify-content-md-start.align-items-center.align-items-md-start
+				button.btn.btn-dark.app-download.mr-0.mr-md-2.mb-2.mb-md-0(data-toggle="modal" data-target="#modalAppDownload" data-dismiss="modal")
+					//- img(src="assets/images/app-store.png")
+					i.fab.fa-apple
+					span App Store
+				button.btn.btn-dark.app-download(data-toggle="modal" data-target="#modalGoogleDownload" data-dismiss="modal")
+					img(src="assets/images/google-play.png")
+					span Google Play
 			.ml-auto.d-flex.align-items-center.actions
 				a.btn.btn-link(data-toggle="modal" data-target="#modalLoginForm") Login
 				a.btn.btn-link(data-toggle="modal" data-target="#modalSignUpForm") Sign Up
-				// navbar dropdown
-			.btn-group
-				button.btn.btn-link.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-					| Merchant
-				.dropdown-menu
-					a.dropdown-item(href='#' data-toggle='modal' data-target='#modalMerchantLoginForm') Login
-					a.dropdown-item(href='#' data-toggle='modal' data-target='#modalMerchantSignUpForm') Sign Up
 
-				.search.ml-0.ml-md-3.mt-3.mt-md-2
+				// navbar dropdown
+			.text-center
+				.btn-group
+					button.btn.btn-link.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+						| Merchant
+					.dropdown-menu
+						a.dropdown-item(href='#' data-toggle='modal' data-target='#modalMerchantLoginForm') Login
+						a.dropdown-item(href='#' data-toggle='modal' data-target='#modalMerchantSignUpForm') Sign Up
+
+				.search.mt-3.mt-md-2.mx-auto
 					i.fas.fa-search.search-btn
 // navbar-end
