@@ -17,4 +17,33 @@
     font-size: 2rem;
     color: $primary;
   }
+
+  .sm-icons {
+    margin-top: 3rem !important;
+
+    .fas,
+    .fab {
+      font-size: 1.5rem;
+    }
+
+    .fa-facebook-f {
+      color: #3b5998;
+    }
+
+    .fa-twitter {
+      color: #00acee;
+    }
+
+    .fa-instagram {
+      color: #e1306c;
+    }
+
+    .fa-youtube {
+      color: #ff0000;
+    }
+
+    .fa-envelope {
+      color: #998888;
+    }
+  }
 }
