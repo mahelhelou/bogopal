@@ -215,22 +215,8 @@
 			.modal-body
 				button.close(type='button' data-dismiss='modal' aria-label='Close')
 					span(aria-hidden='true') &times;
-				h2.mb-4.text-center IOS
-				.my-5
-					.row
-						.col-md-6.mt-3.mt-md-0
-							button.btn.btn-dark.btn-block.p-3.app-download(data-toggle="modal" data-target="#modalAppDownload" data-dismiss="modal")
-								i.fab.fa-apple.app-download__icon
-								.app-download__text
-									//- span.app-download__text-title Get it in
-									span.app-download__text-subtitle App Store
-						.col-md-6.mt-3.mt-md-0
-							button.btn.btn-dark.btn-block.p-3.app-download(data-toggle="modal" data-target="#modalGoogleDownload" data-dismiss="modal")
-								i.fab.fa-google-play.app-download__icon
-								.app-download__text
-									//- span.app-download__text-title Get it in
-									span.app-download__text-subtitle Google Play
-				.qr-code.mt-4.d-flex.flex-column.align-items-center.justify-content-center
+				h2.text-center IOS
+				.qr-code.mt-5.d-flex.flex-column.align-items-center.justify-content-center
 					h4.mb-3 Scan the QR Code
 					img.m-auto(src="assets/images/qr-code.jpg")
 // app-download-modal-end
@@ -244,21 +230,31 @@
 				button.close(type='button' data-dismiss='modal' aria-label='Close')
 					span(aria-hidden='true') &times;
 				h2.mb-4.text-center Android
-				.my-5
-					.row
-						.col-md-6.mt-3.mt-md-0
-							button.btn.btn-dark.btn-block.p-3.app-download(data-toggle="modal" data-target="#modalAppDownload" data-dismiss="modal")
-								i.fab.fa-apple.app-download__icon
-								.app-download__text
-									//- span.app-download__text-title Get it in
-									span.app-download__text-subtitle App Store
-						.col-md-6.mt-3.mt-md-0
-							button.btn.btn-dark.btn-block.p-3.app-download(data-toggle="modal" data-target="#modalGoogleDownload" data-dismiss="modal")
-								i.fab.fa-google-play.app-download__icon
-								.app-download__text
-									//- span.app-download__text-title Get it in
-									span.app-download__text-subtitle Google Play
-				.qr-code.mt-4.d-flex.flex-column.align-items-center.justify-content-center
+				.qr-code.mt-5.d-flex.flex-column.align-items-center.justify-content-center
 					h4.mb-3 Scan the QR Code
 					img.m-auto(src="assets/images/qr-code.jpg")
 // google-download-modal-end
+|
+|
+// Contact modal
+#modalContactForm.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
+	.modal-dialog(role='document')
+		.modal-content.px-3.py-4
+			.modal-body
+				button.close(type='button' data-dismiss='modal' aria-label='Close')
+					span(aria-hidden='false') &times;
+				h2.font-weight-light.text-center.mb-3
+					| Contact Us
+				.text-center
+					p.mb-3 If you have any questions or concerns please contact us by filling out the form below!
+					p.text-muted Thank you and enjoy the savings!
+				form(method="POST" action="#")
+					.row.mt-5.text-center
+						.col-12.mb-3
+							input.form-control-lg(type='text' placeholder='Email' name='email' required)
+						.col-12.mb-4
+							textarea.form-control(placeholder='Send us a message' name='message' required rows='5')
+							button.btn.btn-primary.px-5.py-2.mt-4(type="submit") Send
+						|
+						|
+// contact-modal-end

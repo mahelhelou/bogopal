@@ -31,16 +31,19 @@
             <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           </ul>
-          <div class="ml-4 text-center my-4 my-md-0">
-            <button class="btn btn-primary" data-toggle="modal" data-target="#modalAppDownload">Download App</button>
+          <div class="text-center my-4 my-md-0 d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center align-items-md-start">
+            <button class="btn btn-dark app-download mr-0 mr-md-2 mb-2 mb-md-0" data-toggle="modal" data-target="#modalAppDownload" data-dismiss="modal"><i class="fab fa-apple"></i><span>App Store</span></button>
+            <button class="btn btn-dark app-download" data-toggle="modal" data-target="#modalGoogleDownload" data-dismiss="modal"><img src="assets/images/google-play.png"><span>Google Play</span></button>
           </div>
           <div class="ml-auto d-flex align-items-center actions"><a class="btn btn-link" data-toggle="modal" data-target="#modalLoginForm">Login</a><a class="btn btn-link" data-toggle="modal" data-target="#modalSignUpForm">Sign Up</a>
             <!-- navbar dropdown-->
           </div>
-          <div class="btn-group">
-            <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Merchant</button>
-            <div class="dropdown-menu"><a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalMerchantLoginForm">Login</a><a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalMerchantSignUpForm">Sign Up</a></div>
-            <div class="search ml-0 ml-md-3 mt-3 mt-md-2"><i class="fas fa-search search-btn"></i></div>
+          <div class="text-center">
+            <div class="btn-group">
+              <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Merchant</button>
+              <div class="dropdown-menu"><a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalMerchantLoginForm">Login</a><a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalMerchantSignUpForm">Sign Up</a></div>
+            </div>
+            <div class="search mt-3 mt-md-2 mx-auto"><i class="fas fa-search search-btn"></i></div>
           </div>
         </div>
       </div>
@@ -96,9 +99,12 @@
           </div>
           <div class="col-md-4 mt-4 mt-md-0">
             <h4>Download our App</h4>
-            <div class="mt-4">
-              <button class="btn btn-primary py-2 px-3" data-toggle="modal" data-target="#modalAppDownload">Download App</button>
+            <div class="text-center text-md-left my-4 d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center align-items-md-start">
+              <button class="btn btn-dark app-download mr-0 mr-md-2 mb-2 mb-md-0" data-toggle="modal" data-target="#modalAppDownload" data-dismiss="modal"><i class="fab fa-apple"></i><span>App Store</span></button>
+              <button class="btn btn-dark app-download" data-toggle="modal" data-target="#modalGoogleDownload" data-dismiss="modal"><img src="assets/images/google-play.png"><span>Google Play</span></button>
             </div>
+            <!-- social media-->
+            <div class="sm-icons text-center text-md-left"><a class="mr-4" href="https://facebook.com"><i class="fab fa-facebook-f"></i></a><a class="mr-4" href="https://facebook.com"><i class="fab fa-twitter"></i></a><a class="mr-4" href="https:/twitter.com"><i class="fab fa-instagram"></i></a><a class="mr-4" href="https://youtube.com"><i class="fab fa-youtube"></i></a><a href="#" data-toggle="modal" data-target="#modalContactForm"><i class="fas fa-envelope"></i></a></div>
           </div>
         </div>
       </div>
@@ -378,22 +384,8 @@
         <div class="modal-content p-5">
           <div class="modal-body">
             <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h2 class="mb-4 text-center">IOS</h2>
-            <div class="my-5">
-              <div class="row">
-                <div class="col-md-6 mt-3 mt-md-0">
-                  <button class="btn btn-dark btn-block p-3 app-download" data-toggle="modal" data-target="#modalAppDownload" data-dismiss="modal"><i class="fab fa-apple app-download__icon"></i>
-                    <div class="app-download__text"><span class="app-download__text-subtitle">App Store</span></div>
-                  </button>
-                </div>
-                <div class="col-md-6 mt-3 mt-md-0">
-                  <button class="btn btn-dark btn-block p-3 app-download" data-toggle="modal" data-target="#modalGoogleDownload" data-dismiss="modal"><i class="fab fa-google-play app-download__icon"></i>
-                    <div class="app-download__text"><span class="app-download__text-subtitle">Google Play</span></div>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="qr-code mt-4 d-flex flex-column align-items-center justify-content-center">
+            <h2 class="text-center">IOS</h2>
+            <div class="qr-code mt-5 d-flex flex-column align-items-center justify-content-center">
               <h4 class="mb-3">Scan the QR Code</h4><img class="m-auto" src="assets/images/qr-code.jpg">
             </div>
           </div>
@@ -409,21 +401,7 @@
           <div class="modal-body">
             <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h2 class="mb-4 text-center">Android</h2>
-            <div class="my-5">
-              <div class="row">
-                <div class="col-md-6 mt-3 mt-md-0">
-                  <button class="btn btn-dark btn-block p-3 app-download" data-toggle="modal" data-target="#modalAppDownload" data-dismiss="modal"><i class="fab fa-apple app-download__icon"></i>
-                    <div class="app-download__text"><span class="app-download__text-subtitle">App Store</span></div>
-                  </button>
-                </div>
-                <div class="col-md-6 mt-3 mt-md-0">
-                  <button class="btn btn-dark btn-block p-3 app-download" data-toggle="modal" data-target="#modalGoogleDownload" data-dismiss="modal"><i class="fab fa-google-play app-download__icon"></i>
-                    <div class="app-download__text"><span class="app-download__text-subtitle">Google Play</span></div>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="qr-code mt-4 d-flex flex-column align-items-center justify-content-center">
+            <div class="qr-code mt-5 d-flex flex-column align-items-center justify-content-center">
               <h4 class="mb-3">Scan the QR Code</h4><img class="m-auto" src="assets/images/qr-code.jpg">
             </div>
           </div>
@@ -431,6 +409,35 @@
       </div>
     </div>
     <!-- google-download-modal-end-->
+    
+    <!-- Contact modal-->
+    <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content px-3 py-4">
+          <div class="modal-body">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="false">&times;</span></button>
+            <h2 class="font-weight-light text-center mb-3">Contact Us</h2>
+            <div class="text-center">
+              <p class="mb-3">If you have any questions or concerns please contact us by filling out the form below!</p>
+              <p class="text-muted">Thank you and enjoy the savings!</p>
+            </div>
+            <form method="POST" action="#">
+              <div class="row mt-5 text-center">
+                <div class="col-12 mb-3">
+                  <input class="form-control-lg" type="text" placeholder="Email" name="email" required>
+                </div>
+                <div class="col-12 mb-4">
+                  <textarea class="form-control" placeholder="Send us a message" name="message" required rows="5"></textarea>
+                  <button class="btn btn-primary px-5 py-2 mt-4" type="submit">Send</button>
+                </div>
+                
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- contact-modal-end-->
     
     <!-- Scripts-->
     <script src="./dist/bundled.js"></script>
