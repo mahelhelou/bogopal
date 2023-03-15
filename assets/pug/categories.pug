@@ -1,17 +1,15 @@
 extends ./layouts/page
 
-//- block pageBannerTitle
-//-   h2.page-banner__title All Categories
-//- block pageBannerDescription
-//-   p.page-banner__description This page contains all the categories we serve in BogoPal. You can find the details of each category below.
+//- Mixins
+include ./mixins/_mixin-single-category
 
 block content
-  section.categories.py-5
-    .container
-      .row
-        include ./mixins/_mixin-single-category
-        for i in [1, 2, 3, 4, 5, 6, 7, 8]
-          +category({
-						img: 'https://api.lorem.space/image/watch',
-						title: 'Restaurants',
+	section.categories.py-5
+		.container
+			.row
+				- let categories = ['Span & Gym', 'Restaurants', 'Clothes', 'Body care', 'Accessories', 'Antiques', 'Gold', 'Perfumes']
+				- for (let i = 0; i < 8; i++)
+					+category({
+						img: `https://unsplash.it/200/?random=${i}`,
+						title: categories[i],
 					})
