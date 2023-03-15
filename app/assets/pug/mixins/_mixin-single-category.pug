@@ -1,9 +1,8 @@
 mixin category(catObj)
 	.col-md-3.mb-4
-		.card
-			a(href='single-category.html')
+		a(href="single-category.html")
+			.card
 				img.card-img(src= catObj.img)
-			.card-body
-				.overlay
-					a.text-decoration-none.text-dark(href="single-category.html")
+				.card-body
+					.overlay
 						h5.card-title= catObj.title

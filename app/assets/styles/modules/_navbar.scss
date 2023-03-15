@@ -1,61 +1,61 @@
 .navbar {
-  @include responsive(atSmall) {
-    padding: 2rem 0;
-  }
+	@include responsive(atSmall) {
+		padding: 2rem 0;
+	}
 
-  &-brand__box {
-    width: 50px;
-    height: 50px;
+	&-brand__box {
+		width: 75px;
+		height: 75px;
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-  }
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
 
-  &-nav {
-    @include responsive(atSmall) {
-      text-align: center;
+	&-nav {
+		@include responsive(atSmall) {
+			text-align: center;
 
-    }
+		}
 
-    .nav-item {
-      font-size: 1.25rem;
-    }
-  }
+		.nav-item {
+			font-size: 1.25rem;
+		}
+	}
 
-  .btn-link {
-    text-decoration: none;
-    font-size: 1.25rem;
-    color: rgba($mainTextColor, .7);
-  }
+	.btn-link {
+		text-decoration: none;
+		font-size: 1.25rem;
+		color: rgba($mainTextColor, .7);
+	}
 
-  .search {
-    background: $primary;
-    color: #fff;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
+	.search {
+		background: $primary;
+		color: #fff;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		display: flex;
 
-    .search-btn {
-      font-size: .75rem;
-      margin: auto;
-      cursor: pointer;
-    }
-  }
+		.search-btn {
+			font-size: .75rem;
+			margin: auto;
+			cursor: pointer;
+		}
+	}
 
-  .actions {
-    @include responsive(atSmall) {
-      text-align: center;
-      flex-direction: column;
-    }
+	.actions {
+		@include responsive(atSmall) {
+			text-align: center;
+			flex-direction: column;
+		}
 
-    a {
-      @include responsive(atSmall) {
-        margin-bottom: 0;
-      }
-    }
-  }
+		a {
+			@include responsive(atSmall) {
+				margin-bottom: 0;
+			}
+		}
+	}
 }
